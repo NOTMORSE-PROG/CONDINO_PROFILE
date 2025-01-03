@@ -1,70 +1,70 @@
-const aboutModal = document.querySelector(".modal-bio-container");
-const openAboutModal = document.querySelector(".open-about-modal");
-const closeAboutModal = document.querySelector(".close-about-modal");
+document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+  anchor.addEventListener("click", function (e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute("href"));
+    if (target) {
+      target.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  });
+});
 
-const skillsModal = document.querySelector(".modal-skills-container");
-const openSkillsModal = document.querySelector(".open-skills-modal");
-const closeSkillsModal = document.querySelector(".close-skills-modal");
+document.getElementById("contactForm").addEventListener("submit", function (e) {
+  e.preventDefault();
 
-const projectsModal = document.querySelector(".modal-projects-container");
-const openProjectsModal = document.querySelector(".open-projects-modal");
-const closeProjectsModal = document.querySelector(".close-projects-modal");
+  const name = document.getElementById("name").value;
+  const email = document.getElementById("email").value;
+  const message = document.getElementById("message").value;
 
-const homeLink = document.querySelector(".navigation ul li a");
+  console.log("Form submitted:", { name, email, message });
 
-const setHomeAsActive = () => {
-  homeLink.classList.add("active");
-};
+  alert("Thank you for your message! I will get back to you soon.");
 
-const removeHomeActive = () => {
-  homeLink.classList.remove("active");
-};
+  this.reset();
+});
 
-const openModal = (modal, link) => {
-  const activeModals = document.querySelectorAll(".modal-container.active");
-  activeModals.forEach((activeModal) => {
-    activeModal.classList.remove("active");
+window.addEventListener("scroll", function () {
+  const sections = document.querySelectorAll("section");
+  const navLinks = document.querySelectorAll(".nav-link");
+
+  let current = "";
+
+  sections.forEach((section) => {
+    const sectionTop = section.offsetTop;
+    const sectionHeight = section.clientHeight;
+
+    if (pageYOffset >= sectionTop - sectionHeight / 3) {
+      current = section.getAttribute("id");
+    }
   });
 
-  removeHomeActive();
-
-  document.body.classList.add("modal-active");
-  modal.classList.add("active");
-  link.classList.add("active");
-};
-
-openAboutModal.addEventListener("click", (event) => {
-  event.preventDefault();
-  openModal(aboutModal, openAboutModal);
+  navLinks.forEach((link) => {
+    link.classList.remove("active");
+    if (link.getAttribute("href").substring(1) === current) {
+      link.classList.add("active");
+    }
+  });
 });
 
-closeAboutModal.addEventListener("click", () => {
-  document.body.classList.remove("modal-active");
-  aboutModal.classList.remove("active");
-  openAboutModal.classList.remove("active");
-  setHomeAsActive();
+window.addEventListener("scroll", function () {
+  const cards = document.querySelectorAll(".card");
+
+  cards.forEach((card) => {
+    const cardTop = card.getBoundingClientRect().top;
+    const windowHeight = window.innerHeight;
+
+    if (cardTop < windowHeight * 0.75) {
+      card.style.opacity = "1";
+      card.style.transform = "translateY(0)";
+    }
+  });
 });
 
-openSkillsModal.addEventListener("click", (event) => {
-  event.preventDefault();
-  openModal(skillsModal, openSkillsModal);
-});
-
-closeSkillsModal.addEventListener("click", () => {
-  document.body.classList.remove("modal-active");
-  skillsModal.classList.remove("active");
-  openSkillsModal.classList.remove("active");
-  setHomeAsActive();
-});
-
-openProjectsModal.addEventListener("click", (event) => {
-  event.preventDefault();
-  openModal(projectsModal, openProjectsModal);
-});
-
-closeProjectsModal.addEventListener("click", () => {
-  document.body.classList.remove("modal-active");
-  projectsModal.classList.remove("active");
-  openProjectsModal.classList.remove("active");
-  setHomeAsActive();
+document.addEventListener("DOMContentLoaded", function () {
+  const hero = document.querySelector(".hero");
+  setTimeout(() => {
+    hero.style.opacity = "1";
+  }, 100);
 });

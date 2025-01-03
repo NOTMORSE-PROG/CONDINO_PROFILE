@@ -3,239 +3,371 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home</title>
+    <title>Mark Andrei A. Condino - Portfolio</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/index.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lilita+One&display=swap"
-      rel="stylesheet"
-    />
   </head>
   <body>
-    <div class="navbar full-bleed-nav">
-      <div class="name">Mark Andrei A. Condino</div>
-      <div class="navigation">
-        <ul>
-          <li><a href="index.html" class="active">Home</a></li>
-          <li><a href="#" class="open-about-modal">About</a></li>
-          <li><a href="#" class="open-skills-modal">Skills</a></li>
-          <li><a href="#" class="open-projects-modal">Projects</a></li>
-          <li><a href="">Contact</a></li>
-        </ul>
-      </div>
-    </div>
-
-    <section id="intro" class="intro">
-      <div class="name-intro">
-        <p>
-          Hi, I'm Mark Andrei A. Condino <br />
-          Full Stack Developer
-        </p>
-        <span>I build complete, fully functional websites</span><br />
-        <button class="download-btn" aria-label="Download File">
-          <span>Download CV</span> <i class="fa-solid fa-download"></i>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand">Mark Andrei A. Condino</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="others">
-          <ul>
-            <li>
-              <a
-                href="https://www.linkedin.com/in/mark-andrei-condino-0323a5327/"
-                target="_blank"
-                aria-label="LinkedIn"
-              >
-                <i class="fa-brands fa-linkedin"></i>
-              </a>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#home">Home</a>
             </li>
-            <li>
-              <a
-                href="https://www.facebook.com/profile.php?id=61571294679014&mibextid=ZbWKwL"
-                target="_blank"
-                aria-label="Facebook"
-              >
-                <i class="fa-brands fa-facebook"></i>
-              </a>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
             </li>
-            <li>
-              <a
-                href="https://github.com/NOTMORSE-PROG"
-                target="_blank"
-                aria-label="GitHub"
-              >
-                <i class="fa-brands fa-github"></i>
-              </a>
+            <li class="nav-item">
+              <a class="nav-link" href="#skills">Skills</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#projects">Projects</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
             </li>
           </ul>
         </div>
       </div>
-      <div class="circle-image">
-        <img src="img/condino.jpg" />
+    </nav>
+
+    <section id="home" class="hero">
+      <div class="container h-100">
+        <div class="row h-100 align-items-center">
+          <div class="col-md-6">
+            <h1 class="display-4">
+              Hi, I'm <span class="text-primary">Mark Andrei A. Condino</span>
+            </h1>
+            <p class="lead">Web Developer & Designer</p>
+            <a href="#contact" class="btn btn-primary btn-lg">Download CV</a>
+            <div class="mt-4">
+              <a href="https://github.com/NOTMORSE-PROG" target="_blank" class="text-dark mx-2">
+                <i class="fab fa-github" style="font-size: 2rem;"></i>
+              </a>
+              <a href="https://www.linkedin.com/in/mark-andrei-condino-0323a5327" target="_blank" class="text-primary mx-2">
+                <i class="fab fa-linkedin" style="font-size: 2rem;"></i>
+              </a>
+              <a href="https://www.facebook.com/profile.php?id=61571294679014&mibextid=ZbWKwL" target="_blank" class="text-blue mx-2">
+                <i class="fab fa-facebook" style="font-size: 2rem;"></i>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-6 text-center">
+            <img
+              src="img/condino.jpg"
+              alt="Profile"
+              class="img-fluid rounded-circle profile-img"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    
+
+    <section id="about" class="py-5">
+      <div class="container">
+        <h2 class="text-center mb-5">About Me</h2>
+        <div class="row">
+          <div class="col-md-6">
+            <p>
+              I am a passionate <span>web developer</span> with experience in
+              <span>creating responsive and user-friendly websites</span>. My
+              journey in web development started 3 years ago, and I've been
+              loving every moment of it.
+            </p>
+            <p>
+              I <span>specialize in front-end development</span> and have worked
+              on various projects ranging from small websites to complex web
+              applications.
+            </p>
+          </div>
+          <div class="col-md-6">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Quick Facts</h5>
+                <ul class="list-unstyled">
+                  <li>📍 Metro Manila</li>
+                  <li>💼 Available for Freelance</li>
+                  <li>🎓 Studying 2nd year Information Technology</li>
+                  <li>🌐 2+ Years Experience</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
-    <div class="modal-bio-container">
-      <div class="bio-container">
-        <h1>ABOUT ME</h1>
-        <div class="about">
-          <div class="bio">
-            <h5>Who am I?</h5>
-            <p>
-              I am an Information Technology student, passionate about
-              <span>Web Development</span>.
-            </p>
-            <button class="close-about-modal">Close</button>
-          </div>
-          <div class="experience">
-            <h5>My Experience</h5>
-            <div class="stats">
-              <span>2nd Year - TIP Manila</span>
-              <p>2025 - Present</p>
-            </div>
-            <div class="stats">
-              <span>CodeQuest 3rd Place - TIP Manila</span>
-              <p>2024 - March</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div id="skills" class="modal-skills-container">
-      <div class="skills-section">
-        <button class="close-skills-modal close-about-modal">Close</button>
-        <h1>My Skills</h1>
-        <div class="skills">
-          <div class="frontend">
-            <h1>Frontend</h1>
-            <ul>
-              <li><i class="fa-brands fa-html5"></i> HTML</li>
-              <li><i class="fa-brands fa-css3-alt"></i> CSS</li>
-              <li><i class="fa-brands fa-square-js"></i> JS</li>
-            </ul>
-          </div>
-          <div class="backend">
-            <h1>Backend</h1>
-            <ul>
-              <li><i class="fa-brands fa-python"></i> Python</li>
-              <li><i class="fa-brands fa-java"></i> Java</li>
-              <li><i class="fa-brands fa-php"></i> PHP</li>
-              <li><i class="fa-solid fa-database"></i> MySQL</li>
-              <li><i class="fa-brands fa-java"></i> Kotlin</li>
-            </ul>
-          </div>
-          <div class="tools">
-            <h1>Tools</h1>
-            <ul>
-              <li><i class="fa-brands fa-git"></i> Git</li>
-              <li><i class="fa-brands fa-github"></i> Github</li>
-              <li><i class="fa-brands fa-aws"></i> AWS</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div id="projects" class="modal-projects-container">
-      <div class="projects-section">
-        <button class="close-projects-modal close-skills-modal">Close</button>
-        <h1>My Projects</h1>
-        <div class="projects">
-          <div class="projects-card">
-            <img src="img/sonatrix.JPG" alt="Sonatrix" />
-            <div class="info">
-              <h2>Sonatrix</h2>
-              <p>
-                A website dedicated on showcasing and empowering
-                <span>Filipino Music</span>.
-              </p>
-              <div class="technology-used">
-                <p class="tech-title">Technology Used</p>
-                <ul class="frontend">
-                  <li><i class="fa-brands fa-html5"></i> HTML</li>
-                  <li><i class="fa-brands fa-css3-alt"></i> CSS</li>
-                  <li><i class="fa-brands fa-square-js"></i> JS</li>
+    <section id="skills" class="py-5 bg-light">
+      <div class="container">
+        <h2 class="text-center mb-5">Skills</h2>
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="card skill-card">
+              <div class="card-body">
+                <h5 class="card-title">Frontend</h5>
+                <ul class="list-unstyled">
+                  <li>
+                    <i
+                      class="fab fa-html5"
+                      style="color: #e34c26; font-size: 1.5rem"
+                    ></i>
+                    HTML5
+                  </li>
+                  <li>
+                    <i
+                      class="fab fa-css3-alt"
+                      style="color: #1572b6; font-size: 1.5rem"
+                    ></i>
+                    CSS3
+                  </li>
+                  <li>
+                    <i
+                      class="fab fa-js-square"
+                      style="color: #f7df1e; font-size: 1.5rem"
+                    ></i>
+                    JavaScript
+                  </li>
+                  <li>
+                    <i
+                      class="fab fa-bootstrap"
+                      style="color: #7952b3; font-size: 1.5rem"
+                    ></i>
+                    Bootstrap
+                  </li>
                 </ul>
               </div>
-              <div class="projects-button">
-                <a
-                  href="https://notmorse-prog.github.io/SONATRIX/"
-                  target="_blank"
-                  class="button-link"
-                >
-                  <button class="live">
-                    <i class="fa-solid fa-eye"></i> Live
-                  </button>
-                </a>
-                <a
-                  href="https://github.com/NOTMORSE-PROG/SONATRIX"
-                  target="_blank"
-                  class="button-link"
-                >
-                  <button class="code">
-                    <i class="fa-brands fa-github"></i> Code
-                  </button>
-                </a>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card skill-card">
+              <div class="card-body">
+                <h5 class="card-title">Backend</h5>
+                <ul class="list-unstyled">
+                  <li>
+                    <i class="fab fa-java" style="color: #007396"></i> Java
+                  </li>
+                  <li>
+                    <i class="fab fa-python" style="color: #3776ab"></i> Python
+                  </li>
+                  <li>
+                    <i
+                      class="fas fa-database"
+                      style="color: #f68227; font-size: 1.5rem"
+                    ></i>
+                    Firebase
+                  </li>
+                  <li>
+                    <i
+                      class="fas fa-database"
+                      style="color: #2c5f2d; font-size: 1.5rem"
+                    ></i>
+                    SQL
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
-
-          <div class="projects-card">
-            <img src="img/filipinoblog.JPG" alt="FilipinoBlog" />
-            <div class="info">
-              <h2>FilipinoBlog</h2>
-              <p>
-                A <span>Blogging Platform</span> exclusively for Filipinos to
-                share their thoughts and experiences.
-              </p>
-              <div class="technology-used">
-                <p class="tech-title">Technology Used</p>
-                <ul>
-                  <li><i class="fa-brands fa-php"></i> PHP</li>
-                  <li><i class="fa-brands fa-css3-alt"></i> CSS</li>
-                  <li><i class="fa-brands fa-square-js"></i> JS</li>
-                  <li><i class="fa-solid fa-database"></i> MySQL</li>
+          <div class="col-md-4">
+            <div class="card skill-card">
+              <div class="card-body">
+                <h5 class="card-title">Tools</h5>
+                <ul class="list-unstyled">
+                  <li>
+                    <i
+                      class="fab fa-git-alt"
+                      style="color: #f05032; font-size: 1.5rem"
+                    ></i>
+                    Git
+                  </li>
+                  <li>
+                    <i
+                      class="fas fa-code"
+                      style="color: #007acc; font-size: 1.5rem"
+                    ></i>
+                    VS Code
+                  </li>
+                  <li>
+                    <i
+                      class="fab fa-github"
+                      style="color: #181717; font-size: 1.5rem"
+                    ></i>
+                    GitHub
+                  </li>
+                  <li>
+                    <i
+                      class="fab fa-aws"
+                      style="color: #ff9900; font-size: 1.5rem"
+                    ></i>
+                    AWS
+                  </li>
                 </ul>
-              </div>
-              <div class="projects-button">
-                <a
-                  href="https://filipinoblog.freesite.online/"
-                  target="_blank"
-                  class="button-link"
-                >
-                  <button class="live">
-                    <i class="fa-solid fa-eye"></i> Live
-                  </button>
-                </a>
-                <a
-                  href="https://github.com/NOTMORSE-PROG/Filipino-Blog"
-                  target="_blank"
-                  class="button-link"
-                >
-                  <button class="code">
-                    <i class="fa-brands fa-github"></i> Code
-                  </button>
-                </a>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
 
-    <footer class="custom-footer full-bleed-footer">
-      <div class="footer-content">
-        <p>&copy; 2024 Mark Andrei A. Condino. All rights reserved.</p>
-        <div class="social-links">
-          <a href="https://www.linkedin.com/in/mark-andrei-condino-0323a5327/" class="social-link">LinkedIn</a>
-          <a href="https://github.com/NOTMORSE-PROG" class="social-link">GitHub</a>
-          <a href="https://www.facebook.com/profile.php?id=61571294679014&mibextid=ZbWKwL" class="social-link">Facebook</a>
+    <section id="projects" class="py-5">
+      <div class="container">
+        <h2 class="text-center mb-5">Projects</h2>
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="card project-card">
+              <img
+                src="img/filipinoblog.JPG"
+                class="card-img-top"
+                alt="Project 1"
+              />
+              <div class="card-body">
+                <h5 class="card-title">FilipinoBlog</h5>
+                <p class="card-text">
+                  A blogging Platform exclusively for Filipinos to share their
+                  thoughts and experiences.
+                </p>
+                <p>
+                  <strong>Technologies Used:</strong> HTML, CSS, JavaScript,
+                  PHP, MySQL
+                </p>
+                <div class="d-flex justify-content-between">
+                  <a
+                    href="https://filipinoblog.freesite.online/"
+                    target="_blank"
+                    class="btn btn-primary"
+                    >View Live</a
+                  >
+                  <a
+                    href="https://github.com/NOTMORSE-PROG/Filipino-Blog.git"
+                    target="_blank"
+                    class="btn btn-outline-primary"
+                    >Code</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card project-card">
+              <img
+                src="img/sonatrix.JPG"
+                class="card-img-top"
+                alt="Project 2"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Sonatrix</h5>
+                <p class="card-text">
+                  A website dedicated on showcasing and empowering Filipino
+                  Music.
+                </p>
+                <p><strong>Technologies Used:</strong> HTML, CSS, JavaScript</p>
+                <div class="d-flex justify-content-between">
+                  <a
+                    href="https://notmorse-prog.github.io/SONATRIX/"
+                    target="_blank"
+                    class="btn btn-primary"
+                    >View Live</a
+                  >
+                  <a
+                    href="https://github.com/NOTMORSE-PROG/SONATRIX.git"
+                    target="_blank"
+                    class="btn btn-outline-primary"
+                    >Code</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
+    </section>
+
+    <section id="contact" class="py-5 bg-light">
+      <div class="container">
+        <h2 class="text-center mb-5">Contact Me</h2>
+        <div class="row justify-content-center">
+          <div class="col-md-6">
+            <form id="contactForm" class="contact-form">
+              <div class="mb-3">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="name"
+                  placeholder="Your Name"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  placeholder="Your Email"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <textarea
+                  class="form-control"
+                  id="message"
+                  rows="5"
+                  placeholder="Your Message"
+                  required
+                ></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary w-100">
+                Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="bg-dark text-white py-4">
+      <div class="container text-center">
+        <div class="social-links mb-3">
+          <a
+            href="https://github.com/NOTMORSE-PROG"
+            target="_blank"
+            class="text-white mx-2"
+          >
+            <i class="fab fa-github" style="font-size: 2rem"></i>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/mark-andrei-condino-0323a5327"
+            target="_blank"
+            class="text-white mx-2"
+          >
+            <i class="fab fa-linkedin" style="font-size: 2rem"></i>
+          </a>
+          <a
+            href="https://www.facebook.com/profile.php?id=61571294679014&mibextid=ZbWKwL"
+            target="_blank"
+            class="text-white mx-2"
+          >
+            <i class="fab fa-facebook" style="font-size: 2rem"></i>
+          </a>
+        </div>
+        <p class="mb-0">© 2024 Mark Andrei A. Condino. All rights reserved.</p>
       </div>
     </footer>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/index.js"></script>
   </body>
-  <script src="js/index.js"></script>
 </html>
