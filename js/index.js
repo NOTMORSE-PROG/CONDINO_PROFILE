@@ -11,20 +11,6 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   });
 });
 
-document.getElementById("contactForm").addEventListener("submit", function (e) {
-  e.preventDefault();
-
-  const name = document.getElementById("name").value;
-  const email = document.getElementById("email").value;
-  const message = document.getElementById("message").value;
-
-  console.log("Form submitted:", { name, email, message });
-
-  alert("Thank you for your message! I will get back to you soon.");
-
-  this.reset();
-});
-
 window.addEventListener("scroll", function () {
   const sections = document.querySelectorAll("section");
   const navLinks = document.querySelectorAll(".nav-link");
@@ -68,3 +54,34 @@ document.addEventListener("DOMContentLoaded", function () {
     hero.style.opacity = "1";
   }, 100);
 });
+
+document
+  .getElementById("contactForm")
+  .addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    const formData = new FormData(this);
+    fetch(this.action, {
+      method: "POST",
+      body: formData,
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        if (data.success) {
+          document.getElementById("formContainer").classList.add("d-none");
+          document.getElementById("successMessage").classList.remove("d-none");
+        } else {
+          alert("Something went wrong. Please try again.");
+        }
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+        alert("An error occurred while submitting the form.");
+      });
+  });
+
+function goBack() {
+  document.getElementById("successMessage").classList.add("d-none");
+  document.getElementById("formContainer").classList.remove("d-none");
+  document.getElementById("contactForm").reset();
+}

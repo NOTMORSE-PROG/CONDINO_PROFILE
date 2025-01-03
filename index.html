@@ -55,14 +55,26 @@
             <p class="lead">Web Developer & Designer</p>
             <a href="#contact" class="btn btn-primary btn-lg">Download CV</a>
             <div class="mt-4">
-              <a href="https://github.com/NOTMORSE-PROG" target="_blank" class="text-dark mx-2">
-                <i class="fab fa-github" style="font-size: 2rem;"></i>
+              <a
+                href="https://github.com/NOTMORSE-PROG"
+                target="_blank"
+                class="text-dark mx-2"
+              >
+                <i class="fab fa-github" style="font-size: 2rem"></i>
               </a>
-              <a href="https://www.linkedin.com/in/mark-andrei-condino-0323a5327" target="_blank" class="text-primary mx-2">
-                <i class="fab fa-linkedin" style="font-size: 2rem;"></i>
+              <a
+                href="https://www.linkedin.com/in/mark-andrei-condino-0323a5327"
+                target="_blank"
+                class="text-primary mx-2"
+              >
+                <i class="fab fa-linkedin" style="font-size: 2rem"></i>
               </a>
-              <a href="https://www.facebook.com/profile.php?id=61571294679014&mibextid=ZbWKwL" target="_blank" class="text-blue mx-2">
-                <i class="fab fa-facebook" style="font-size: 2rem;"></i>
+              <a
+                href="https://www.facebook.com/profile.php?id=61571294679014&mibextid=ZbWKwL"
+                target="_blank"
+                class="text-blue mx-2"
+              >
+                <i class="fab fa-facebook" style="font-size: 2rem"></i>
               </a>
             </div>
           </div>
@@ -76,7 +88,6 @@
         </div>
       </div>
     </section>
-    
 
     <section id="about" class="py-5">
       <div class="container">
@@ -298,42 +309,70 @@
 
     <section id="contact" class="py-5 bg-light">
       <div class="container">
-        <h2 class="text-center mb-5">Contact Me</h2>
-        <div class="row justify-content-center">
-          <div class="col-md-6">
-            <form id="contactForm" class="contact-form">
-              <div class="mb-3">
+        <div id="formContainer">
+          <h2 class="text-center mb-5">Contact Me</h2>
+          <div class="row justify-content-center">
+            <div class="col-md-6">
+              <form
+                id="contactForm"
+                class="contact-form"
+                method="POST"
+                action="https://api.web3forms.com/submit"
+                enctype="multipart/form-data"
+              >
+                <div class="mb-3">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="name"
+                    name="name"
+                    placeholder="Your Name"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="email"
+                    name="email"
+                    placeholder="Your Email"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <textarea
+                    class="form-control"
+                    id="message"
+                    name="message"
+                    rows="5"
+                    placeholder="Your Message"
+                    required
+                  ></textarea>
+                </div>
                 <input
-                  type="text"
-                  class="form-control"
-                  id="name"
-                  placeholder="Your Name"
-                  required
+                  type="hidden"
+                  name="access_key"
+                  value="26a23a90-69b3-4754-a992-7029d4e13c7a"
                 />
-              </div>
-              <div class="mb-3">
-                <input
-                  type="email"
-                  class="form-control"
-                  id="email"
-                  placeholder="Your Email"
-                  required
-                />
-              </div>
-              <div class="mb-3">
-                <textarea
-                  class="form-control"
-                  id="message"
-                  rows="5"
-                  placeholder="Your Message"
-                  required
-                ></textarea>
-              </div>
-              <button type="submit" class="btn btn-primary w-100">
-                Send Message
-              </button>
-            </form>
+                <button type="submit" class="btn btn-primary w-100">
+                  Send Message
+                </button>
+              </form>
+            </div>
           </div>
+        </div>
+
+        <div id="successMessage" class="text-center d-none">
+          <div class="checkmark">✓</div>
+          <h3 class="text-success mt-4">Thank You!</h3>
+          <p class="text-muted">
+            Your form has been submitted successfully. We will reply to you
+            soon.
+          </p>
+          <button class="btn btn-primary mt-4" onclick="goBack()">
+            Go Back
+          </button>
         </div>
       </div>
     </section>
