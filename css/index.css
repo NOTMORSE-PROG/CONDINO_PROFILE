@@ -17,6 +17,16 @@ video {
   max-width: 100%;
 }
 
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 html {
   margin-left: 200px;
   margin-right: 200px;
@@ -79,7 +89,6 @@ html {
 .intro {
   display: flex;
   justify-content: space-evenly;
-  margin-top: 170px;
   font-size: 19px;
   line-height: 50px;
   align-items: center;
@@ -607,7 +616,6 @@ body.modal-active::before {
 
 /* footer css */
 .custom-footer {
-  margin-top: 141.4px;
   background-color: #232323;
   color: #fff;
   padding: 30px 0;
