@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home</title>
-    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="css/index.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
@@ -21,16 +21,16 @@
       <div class="name">Mark Andrei A. Condino</div>
       <div class="navigation">
         <ul>
-          <li><a href="" class="active">Home</a></li>
-          <li><a href="">About</a></li>
-          <li><a href="">Skills</a></li>
-          <li><a href="">Project</a></li>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="#" class="open-about-modal">About</a></li>
+          <li><a href="#" class="open-skills-modal">Skills</a></li>
+          <li><a href="#" class="open-projects-modal">Projects</a></li>
           <li><a href="">Contact</a></li>
         </ul>
       </div>
     </div>
 
-    <div class="intro">
+    <section id="intro" class="intro">
       <div class="name-intro">
         <p>
           Hi, I'm Mark Andrei A. Condino <br />
@@ -75,146 +75,167 @@
       <div class="circle-image">
         <img src="img/condino.jpg" />
       </div>
-    </div>
+    </section>
 
-    <div class="bio-container">
-      <h1>ABOUT ME</h1>
-      <div class="about">
-        <div class="bio">
-          <h5>Who am I?</h5>
-          <p>
-            I am a Information Technology student, passionate about
-            <span>Web Development</span>.
-          </p>
-        </div>
-        <div class="experience">
-          <h5>My Experience</h5>
-          <div class="stats">
-            <span>2nd Year - TIP Manila</span>
-            <p>2025 - Present</p>
-          </div>
-          <div class="stats">
-            <span>CodeQuest 3rd Place - TIP Manila</span>
-            <p>2024 - March</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="skills-section full-bleed-skills">
-      <h1>My Skills</h1>
-      <div class="skills">
-        <div class="frontend">
-          <h1>Frontend</h1>
-          <ul>
-            <li><i class="fa-brands fa-html5"></i> HTML</li>
-            <li><i class="fa-brands fa-css3-alt"></i> CSS</li>
-            <li><i class="fa-brands fa-square-js"></i> JS</li>
-          </ul>
-        </div>
-        <div class="backend">
-          <h1>Backend</h1>
-          <ul>
-            <li><i class="fa-brands fa-python"></i> Python</li>
-            <li><i class="fa-brands fa-java"></i> Java</li>
-            <li><i class="fa-brands fa-php"></i> PHP</li>
-            <li><i class="fa-solid fa-database"></i> MySQL</li>
-            <li><i class="fa-brands fa-java"></i> Kotlin</li>
-          </ul>
-        </div>
-        <div class="tools">
-          <h1>Tools</h1>
-          <ul>
-            <li><i class="fa-brands fa-git"></i> Git</li>
-            <li><i class="fa-brands fa-github"></i> Github</li>
-            <li><i class="fa-brands fa-aws"></i> AWS</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <div class="projects-section">
-      <h1>My Projects</h1>
-      <div class="projects">
-        <div class="projects-card">
-          <img src="img/sonatrix.JPG" alt="sonatrix" />
-          <div class="info">
-            <h2>Sonatrix</h2>
+    <div class="modal-bio-container">
+      <div class="bio-container">
+        <h1>ABOUT ME</h1>
+        <div class="about">
+          <div class="bio">
+            <h5>Who am I?</h5>
             <p>
-              A website dedicated on showcasing and empowering
-              <span>Filipino Music</span>.
+              I am an Information Technology student, passionate about
+              <span>Web Development</span>.
             </p>
-            <div class="technology-used">
-              <p class="tech-title">Technology Used</p>
-              <ul class="frontend">
-                <li><i class="fa-brands fa-html5"></i> HTML</li>
-                <li><i class="fa-brands fa-css3-alt"></i> CSS</li>
-                <li><i class="fa-brands fa-square-js"></i> JS</li>
-              </ul>
-            </div>
-
-            <div class="projects-button">
-              <a
-                href="https://notmorse-prog.github.io/SONATRIX/"
-                target="_blank"
-                class="button-link"
-              >
-                <button class="live">
-                  <i class="fa-solid fa-eye"></i> Live
-                </button>
-              </a>
-              <a
-                href="https://github.com/NOTMORSE-PROG/SONATRIX"
-                target="_blank"
-                class="button-link"
-              >
-                <button class="code">
-                  <i class="fa-brands fa-github"></i> Code
-                </button>
-              </a>
-            </div>
+            <button class="close-about-modal">Close</button>
           </div>
-        </div>
-        <div class="projects-card">
-          <img src="img/filipinoblog.JPG" alt="filipinoblog" />
-          <div class="info">
-            <h2>FilipinoBlog</h2>
-            <p>
-              A <span>Blogging Platform</span> exclusively for Filipinos to
-              share their thoughts and experiences.
-            </p>
-            <div class="technology-used">
-              <p class="tech-title">Technology Used</p>
-              <ul>
-                <li><i class="fa-brands fa-php"></i> PHP</li>
-                <li><i class="fa-brands fa-css3-alt"></i> CSS</li>
-                <li><i class="fa-brands fa-square-js"></i> JS</li>
-                <li><i class="fa-solid fa-database"></i> MySQL</li>
-              </ul>
+          <div class="experience">
+            <h5>My Experience</h5>
+            <div class="stats">
+              <span>2nd Year - TIP Manila</span>
+              <p>2025 - Present</p>
             </div>
-            <div class="projects-button">
-              <a
-                href="https://filipinoblog.freesite.online/"
-                target="_blank"
-                class="button-link"
-              >
-                <button class="live">
-                  <i class="fa-solid fa-eye"></i> Live
-                </button>
-              </a>
-              <a
-                href="https://github.com/NOTMORSE-PROG/Filipino-Blog"
-                target="_blank"
-                class="button-link"
-              >
-                <button class="code">
-                  <i class="fa-brands fa-github"></i> Code
-                </button>
-              </a>
+            <div class="stats">
+              <span>CodeQuest 3rd Place - TIP Manila</span>
+              <p>2024 - March</p>
             </div>
           </div>
         </div>
       </div>
     </div>
+
+    <div id="skills" class="modal-skills-container">
+      <div class="skills-section">
+        <button class="close-skills-modal close-about-modal">Close</button>
+        <h1>My Skills</h1>
+        <div class="skills">
+          <div class="frontend">
+            <h1>Frontend</h1>
+            <ul>
+              <li><i class="fa-brands fa-html5"></i> HTML</li>
+              <li><i class="fa-brands fa-css3-alt"></i> CSS</li>
+              <li><i class="fa-brands fa-square-js"></i> JS</li>
+            </ul>
+          </div>
+          <div class="backend">
+            <h1>Backend</h1>
+            <ul>
+              <li><i class="fa-brands fa-python"></i> Python</li>
+              <li><i class="fa-brands fa-java"></i> Java</li>
+              <li><i class="fa-brands fa-php"></i> PHP</li>
+              <li><i class="fa-solid fa-database"></i> MySQL</li>
+              <li><i class="fa-brands fa-java"></i> Kotlin</li>
+            </ul>
+          </div>
+          <div class="tools">
+            <h1>Tools</h1>
+            <ul>
+              <li><i class="fa-brands fa-git"></i> Git</li>
+              <li><i class="fa-brands fa-github"></i> Github</li>
+              <li><i class="fa-brands fa-aws"></i> AWS</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="projects" class="modal-projects-container">
+      <div class="projects-section">
+        <button class="close-projects-modal close-skills-modal">Close</button>
+        <h1>My Projects</h1>
+        <div class="projects">
+          <div class="projects-card">
+            <img src="img/sonatrix.JPG" alt="Sonatrix" />
+            <div class="info">
+              <h2>Sonatrix</h2>
+              <p>
+                A website dedicated on showcasing and empowering
+                <span>Filipino Music</span>.
+              </p>
+              <div class="technology-used">
+                <p class="tech-title">Technology Used</p>
+                <ul class="frontend">
+                  <li><i class="fa-brands fa-html5"></i> HTML</li>
+                  <li><i class="fa-brands fa-css3-alt"></i> CSS</li>
+                  <li><i class="fa-brands fa-square-js"></i> JS</li>
+                </ul>
+              </div>
+              <div class="projects-button">
+                <a
+                  href="https://notmorse-prog.github.io/SONATRIX/"
+                  target="_blank"
+                  class="button-link"
+                >
+                  <button class="live">
+                    <i class="fa-solid fa-eye"></i> Live
+                  </button>
+                </a>
+                <a
+                  href="https://github.com/NOTMORSE-PROG/SONATRIX"
+                  target="_blank"
+                  class="button-link"
+                >
+                  <button class="code">
+                    <i class="fa-brands fa-github"></i> Code
+                  </button>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="projects-card">
+            <img src="img/filipinoblog.JPG" alt="FilipinoBlog" />
+            <div class="info">
+              <h2>FilipinoBlog</h2>
+              <p>
+                A <span>Blogging Platform</span> exclusively for Filipinos to
+                share their thoughts and experiences.
+              </p>
+              <div class="technology-used">
+                <p class="tech-title">Technology Used</p>
+                <ul>
+                  <li><i class="fa-brands fa-php"></i> PHP</li>
+                  <li><i class="fa-brands fa-css3-alt"></i> CSS</li>
+                  <li><i class="fa-brands fa-square-js"></i> JS</li>
+                  <li><i class="fa-solid fa-database"></i> MySQL</li>
+                </ul>
+              </div>
+              <div class="projects-button">
+                <a
+                  href="https://filipinoblog.freesite.online/"
+                  target="_blank"
+                  class="button-link"
+                >
+                  <button class="live">
+                    <i class="fa-solid fa-eye"></i> Live
+                  </button>
+                </a>
+                <a
+                  href="https://github.com/NOTMORSE-PROG/Filipino-Blog"
+                  target="_blank"
+                  class="button-link"
+                >
+                  <button class="code">
+                    <i class="fa-brands fa-github"></i> Code
+                  </button>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="custom-footer full-bleed-footer">
+      <div class="footer-content">
+        <p>&copy; 2024 Mark Andrei A. Condino. All rights reserved.</p>
+        <div class="social-links">
+          <a href="https://www.linkedin.com/in/mark-andrei-condino-0323a5327/" class="social-link">LinkedIn</a>
+          <a href="https://github.com/NOTMORSE-PROG" class="social-link">GitHub</a>
+          <a href="#" class="social-link">Facebook</a>
+        </div>
+      </div>
+    </footer>
   </body>
+  <script src="js/index.js"></script>
 </html>
