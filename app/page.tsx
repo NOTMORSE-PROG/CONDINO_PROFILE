@@ -417,7 +417,7 @@ export default function Portfolio() {
                 Get In Touch
               </Button>
               <Button size="lg" variant="outline" asChild>
-                <a href="https://utfs.io/f/D8rLLdYxj7dg1JUpHdtoSixMG0jUznhsECRJXaYwF6kApLqg" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+                <a href="https://thkp19wmdj.ufs.sh/f/D8rLLdYxj7dgNj7vrds9K72RADpPCscIoqU6FHayWekdMig3" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
                   <Download className="w-5 h-5" />
                   Download Resume
                 </a>
