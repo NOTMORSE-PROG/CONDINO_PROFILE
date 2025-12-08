@@ -6,7 +6,7 @@
 
 [![Portfolio](https://img.shields.io/badge/Portfolio-Live-blue?style=for-the-badge&logo=vercel)](https://condino-profile.vercel.app)
 [![GitHub](https://img.shields.io/badge/GitHub-NOTMORSE--PROG-181717?style=for-the-badge&logo=github)](https://github.com/NOTMORSE-PROG)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=for-the-badge&logo=linkedin)](https://linkedin.com/in/mark-andrei-condino)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/mark-andrei-condino-0323a5327/)
 [![Facebook](https://img.shields.io/badge/Facebook-Follow-1877F2?style=for-the-badge&logo=facebook)](https://www.facebook.com/markandrei.condino.5)
 
 <br />
