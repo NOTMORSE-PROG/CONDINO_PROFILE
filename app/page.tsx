@@ -16,6 +16,7 @@ import {
   ChevronDown,
   Download,
   Github,
+  Vote,
 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
@@ -81,6 +82,10 @@ export default function Portfolio() {
     { name: "Bootstrap", icon: "💜", color: "bg-teal-600" },
     { name: "Cloudinary", icon: "☁️", color: "bg-blue-400" },
     { name: "PHP", icon: "🐘", color: "bg-indigo-500" },
+    { name: "Laravel", icon: "🔴", color: "bg-red-600" },
+    { name: "MySQL", icon: "🐬", color: "bg-blue-700" },
+    { name: "PostgreSQL", icon: "🐘", color: "bg-blue-800" },
+    { name: "Prisma", icon: "△", color: "bg-slate-800" },
   ]
 
   const ImageSlideshow = ({ images, alt, labels }: { images: string[]; alt: string; labels?: string[] }) => {
@@ -157,14 +162,14 @@ export default function Portfolio() {
       description:
         "A modern Android marketplace application designed specifically for students of the Technological Institute of the Philippines (T.I.P). Built with Kotlin and Jetpack Compose, featuring secure authentication, smart pickup system, and comprehensive e-commerce functionality.",
       images: [
-        "/images/tip-mart-1.png",
-        "/images/tip-mart-2.png",
-        "/images/tip-mart-3.png",
-        "/images/tip-mart-4.png",
-        "/images/tip-mart-5.png",
-        "/images/tip-mart-6.png",
-        "/images/tip-mart-7.png",
-        "/images/tip-mart-8.png",
+        "https://utfs.io/f/D8rLLdYxj7dgdeVxh6W5NnIGvPMQTCt6UOpyVu1iJ7ZhqKeY",
+        "https://utfs.io/f/D8rLLdYxj7dgZMbPPGhT1zGeqEpUh9usSwcPWtbXVJyLdIF6",
+        "https://utfs.io/f/D8rLLdYxj7dgbawhfFWe1Ti2nsXVJUw7jxyWNqozIP9g8QfA",
+        "https://utfs.io/f/D8rLLdYxj7dgrUk6OaRJ7voajpfNuiZyhb2Ew6Xsl9GQdDKS",
+        "https://utfs.io/f/D8rLLdYxj7dgPHRnJCP8w04VkGSBJ658ZnqW3aFgMixKUDhu",
+        "https://utfs.io/f/D8rLLdYxj7dgDhX9uHYxj7dgmQqZGuaL3VBUc9zO8TRJ0fMi",
+        "https://utfs.io/f/D8rLLdYxj7dg1DRq3CoSixMG0jUznhsECRJXaYwF6kApLqgW",
+        "https://utfs.io/f/D8rLLdYxj7dgZLAy4shT1zGeqEpUh9usSwcPWtbXVJyLdIF6",
       ],
       imageLabels: [
         "Create Listing and Product Details",
@@ -190,20 +195,20 @@ export default function Portfolio() {
       type: "Mobile App",
       icon: <Smartphone className="w-6 h-6" />,
       githubUrl: "https://github.com/NOTMORSE-PROG/T.I.P-MART",
-      documentationUrl: "/docs/tip-mart-documentation.pdf",
+      documentationUrl: "https://utfs.io/f/D8rLLdYxj7dg3Yf9lOdH5gh02zf6qENUyrjFYAIvue3JlXTx",
     },
     {
       title: "VocaNova 2025",
       description:
         "A comprehensive vocabulary learning Android application with interactive lessons, engaging mini-games, and gamification system. Features structured learning paths, achievement tracking, and immersive educational games with Material Design 3 interface.",
       images: [
-        "/images/vocanova-1.png",
-        "/images/vocanova-2.png",
-        "/images/vocanova-3.png",
-        "/images/vocanova-4.png",
-        "/images/vocanova-5.png",
-        "/images/vocanova-6.png",
-        "/images/vocanova-7.png",
+        "https://utfs.io/f/D8rLLdYxj7dgKejMvCOnlPFOuhgIcRqxZbDLJUwekVHr3N7Y",
+        "https://utfs.io/f/D8rLLdYxj7dgqBtek9QWb6t3cKueArC2p1ldzhmfLo7En9aO",
+        "https://utfs.io/f/D8rLLdYxj7dg8LApBE2AwrVUKSkNIhPZu9OEp7x12eafWizF",
+        "https://utfs.io/f/D8rLLdYxj7dg1ijuV5oSixMG0jUznhsECRJXaYwF6kApLqgW",
+        "https://utfs.io/f/D8rLLdYxj7dgHL9kFnbvEgOlV0x5InZe6ySkjKND7CcqsPQR",
+        "https://utfs.io/f/D8rLLdYxj7dg1N2AfwoSixMG0jUznhsECRJXaYwF6kApLqgW",
+        "https://utfs.io/f/D8rLLdYxj7dg1nrr0aoSixMG0jUznhsECRJXaYwF6kApLqgW",
       ],
       imageLabels: [
         "Shop & Achievements",
@@ -228,23 +233,23 @@ export default function Portfolio() {
       type: "Educational App",
       icon: <Code className="w-6 h-6" />,
       githubUrl: "https://github.com/NOTMORSE-PROG/VOCANOVA",
-      documentationUrl: "/docs/vocanova-documentation.pdf",
+      documentationUrl: "https://utfs.io/f/D8rLLdYxj7dgwTyZaUK7JnCpIoENMwDqHuGxvh3YFL4BlRry",
     },
     {
       title: "FilipinoBlog",
       description:
         "A comprehensive blogging platform specifically designed for Filipino bloggers and writers. Features complete user management, analytics dashboard, community engagement tools, and a beautiful Filipino-themed design with cultural sensitivity.",
       images: [
-        "/images/filipinoblog-1.png",
-        "/images/filipinoblog-2.png",
-        "/images/filipinoblog-3.png",
-        "/images/filipinoblog-4.png",
-        "/images/filipinoblog-5.png",
-        "/images/filipinoblog-6.png",
-        "/images/filipinoblog-7.png",
-        "/images/filipinoblog-8.png",
-        "/images/filipinoblog-9.png",
-        "/images/filipinoblog-10.png",
+        "https://utfs.io/f/D8rLLdYxj7dgwTIImbg7JnCpIoENMwDqHuGxvh3YFL4BlRry",
+        "https://utfs.io/f/D8rLLdYxj7dgF8HbhAXLiweFRd9QOjYKJ2snbghqoyHk6T8G",
+        "https://utfs.io/f/D8rLLdYxj7dgCV2Dj2nrIouyYGlFatkHAbVe1inQ54WPjOMd",
+        "https://utfs.io/f/D8rLLdYxj7dgk2d6DG3joeBiyL1g0aNlpZwS9Y2McW3vEfFX",
+        "https://utfs.io/f/D8rLLdYxj7dgHa1JZdbvEgOlV0x5InZe6ySkjKND7CcqsPQR",
+        "https://utfs.io/f/D8rLLdYxj7dgbRmcAAWe1Ti2nsXVJUw7jxyWNqozIP9g8QfA",
+        "https://utfs.io/f/D8rLLdYxj7dgxsanGP4YR7XEpuJeTaktG8ZFLDbzyBqH3w1s",
+        "https://utfs.io/f/D8rLLdYxj7dgw4wW4h7JnCpIoENMwDqHuGxvh3YFL4BlRryS",
+        "https://utfs.io/f/D8rLLdYxj7dgLInNreEsMvnWPV5GuziBEOcSC8KQUAZJbI0l",
+        "https://utfs.io/f/D8rLLdYxj7dggxhH5Nafaqsn5vAlwTPbeJcdRor29Gzjm18Z",
       ],
       imageLabels: [
         "My Post Page",
@@ -272,7 +277,47 @@ export default function Portfolio() {
       type: "Web Platform",
       icon: <Globe className="w-6 h-6" />,
       githubUrl: "https://github.com/NOTMORSE-PROG/Filipino-Blog",
-      documentationUrl: "/docs/filipinoblog-documentation.pdf",
+      documentationUrl: "https://utfs.io/f/D8rLLdYxj7dgH9HAN7bvEgOlV0x5InZe6ySkjKND7CcqsPQR",
+    },
+    {
+      title: "VoteHubPH",
+      description:
+        "A comprehensive voting platform designed to empower Filipino citizens with transparent candidate information, community insights, and real-time engagement across all levels of Philippine government. Features location-based filtering, community engagement, and admin moderation.",
+      images: [
+        "https://utfs.io/f/D8rLLdYxj7dgQ2WeVICi9est7YCJ2z1RkFoSLdfQhIcZHgun",
+        "https://utfs.io/f/D8rLLdYxj7dgJI2myfAsnCibyTIY9ueGqWFpj14VNLc08akz",
+        "https://utfs.io/f/D8rLLdYxj7dgG8ms4Oez7FEZ0RmdYQ1PB8ClKLxVajuHXNq6",
+        "https://utfs.io/f/D8rLLdYxj7dgMcu2lpK10OC65fBRyquLFe9YvEGnziI48Atg",
+        "https://utfs.io/f/D8rLLdYxj7dg4oAJuuwm2oJitbd5aKzOBux3kRCAQF1LcVmy",
+        "https://utfs.io/f/D8rLLdYxj7dg2DPdK9Hf3guHyGNcpiRO1UtKzA0LQPhmsZ6J",
+        "https://utfs.io/f/D8rLLdYxj7dgk52wrLI3joeBiyL1g0aNlpZwS9Y2McW3vEfF",
+        "https://utfs.io/f/D8rLLdYxj7dgMqqtcgaK10OC65fBRyquLFe9YvEGnziI48At",
+      ],
+      imageLabels: [
+        "Homepage",
+        "Candidates Page",
+        "Elections Page",
+        "Party List Directory",
+        "Party List Content",
+        "Candidate Profile",
+        "User Profile",
+        "Candidate Creation",
+      ],
+      tech: ["Next.js 14", "TypeScript", "Laravel 11", "PostgreSQL", "Tailwind CSS", "Prisma"],
+      features: [
+        "Candidate Profiles across all government levels",
+        "Location-Based Filtering (Region, Province, City, Barangay)",
+        "Community Engagement with voting and comments",
+        "Secure Authentication (Google OAuth, Email OTP)",
+        "User Post Submission for community review",
+        "Admin Moderation for content approval",
+        "Party List Directory with member listings",
+        "Real-time Updates and notifications",
+      ],
+      type: "Full-Stack Web App",
+      icon: <Vote className="w-6 h-6" />,
+      githubUrl: "https://github.com/NOTMORSE-PROG/VoteHubPH",
+      documentationUrl: "https://utfs.io/f/D8rLLdYxj7dg4Axco3m2oJitbd5aKzOBux3kRCAQF1LcVmyg",
     },
   ]
 
@@ -356,7 +401,7 @@ export default function Portfolio() {
               <span className="text-gray-800 dark:text-white">Condino</span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-8 max-w-3xl mx-auto">
-              Full-Stack Web & Android App Developer
+              Software Developer
               <br />
               Crafting innovative solutions with modern technologies
             </p>
@@ -370,6 +415,12 @@ export default function Portfolio() {
               </Button>
               <Button size="lg" variant="outline" onClick={() => scrollToSection("contact")}>
                 Get In Touch
+              </Button>
+              <Button size="lg" variant="outline" asChild>
+                <a href="https://utfs.io/f/D8rLLdYxj7dg1JUpHdtoSixMG0jUznhsECRJXaYwF6kApLqg" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+                  <Download className="w-5 h-5" />
+                  Download Resume
+                </a>
               </Button>
             </div>
           </motion.div>
@@ -408,7 +459,7 @@ export default function Portfolio() {
               >
                 <div className="relative w-64 h-64 md:w-80 md:h-80 mx-auto">
                   <Image
-                    src="/images/mark-profile.jpg"
+                    src="https://utfs.io/f/D8rLLdYxj7dgWezinVxpzPSwLqOM1oDT3nl2t9C0fYXkRsrN"
                     alt="Mark Andrei Condino - Professional Photo"
                     fill
                     className="object-cover rounded-2xl shadow-2xl"
@@ -427,35 +478,32 @@ export default function Portfolio() {
                 className="flex-1 text-left"
               >
                 <p className="text-lg text-gray-600 dark:text-gray-300 mb-6">
-                  I'm a passionate full-stack developer with expertise in both mobile and web development. My journey in
-                  technology has led me to create innovative solutions that bridge the gap between user needs and
-                  cutting-edge technology.
+                  Resourceful Software Developer with practical experience delivering dynamic websites and robust
+                  Android applications. I specialize in project development using React.js, Next.js, PHP, Kotlin, and
+                  Firebase, with a proven track record of launching apps and platforms that solve real-world problems
+                  and support student and community engagement.
                 </p>
                 <p className="text-lg text-gray-600 dark:text-gray-300 mb-6">
-                  With a strong foundation in Android development using Kotlin and Jetpack Compose, I specialize in
-                  creating native Android applications that serve real-world needs. My mobile development expertise
-                  focuses on Android platform, while my web development skills span from modern React/Next.js
-                  applications to traditional PHP-based platforms.
+                  As a freelancer since 2023, I've delivered 10+ responsive websites and 3+ Android applications with
+                  Firebase integration. I've also worked as a Software Developer at Ethos Bytes (Australia), collaborating
+                  on design, development, and testing using Docker, Django, React, and implementing OAuth2.0 authentication
+                  with Microsoft Entra.
                 </p>
                 <p className="text-lg text-gray-600 dark:text-gray-300 mb-8">
-                  I believe in creating user-centric solutions that not only function flawlessly but also provide
-                  exceptional user experiences. Every project I work on is an opportunity to learn, grow, and contribute
-                  to the developer community.
+                  Beyond coding, I serve as Open Source President leading 50+ active members in programming excellence,
+                  and as Lead Cloud Security Officer implementing AWS compliance standards. Known for creative solutions,
+                  adaptability, and technical leadership with strong communication and project management skills.
                 </p>
 
                 {/* Quick Stats */}
-                <div className="grid grid-cols-2 md:grid-cols-3 gap-6 mt-8">
+                <div className="grid grid-cols-2 gap-6 mt-8">
                   <div className="text-center p-4 bg-gray-50 dark:bg-gray-700 rounded-xl">
-                    <div className="text-2xl font-bold text-blue-600 dark:text-blue-400">3+</div>
-                    <div className="text-sm text-gray-600 dark:text-gray-300">Projects Built</div>
+                    <div className="text-2xl font-bold text-blue-600 dark:text-blue-400">10+</div>
+                    <div className="text-sm text-gray-600 dark:text-gray-300">Websites Delivered</div>
                   </div>
                   <div className="text-center p-4 bg-gray-50 dark:bg-gray-700 rounded-xl">
-                    <div className="text-2xl font-bold text-teal-600 dark:text-teal-400">5+</div>
-                    <div className="text-sm text-gray-600 dark:text-gray-300">Technologies</div>
-                  </div>
-                  <div className="text-center p-4 bg-gray-50 dark:bg-gray-700 rounded-xl col-span-2 md:col-span-1">
-                    <div className="text-2xl font-bold text-cyan-600 dark:text-cyan-400">2025</div>
-                    <div className="text-sm text-gray-600 dark:text-gray-300">Active Year</div>
+                    <div className="text-2xl font-bold text-teal-600 dark:text-teal-400">3+</div>
+                    <div className="text-sm text-gray-600 dark:text-gray-300">Android Apps</div>
                   </div>
                 </div>
               </motion.div>
@@ -498,7 +546,7 @@ export default function Portfolio() {
                 { name: "Jetpack Compose", desc: "Modern Android UI", level: "Expert" },
                 { name: "Next.js", desc: "Full-stack React", level: "Advanced" },
                 { name: "React", desc: "Frontend Library", level: "Advanced" },
-                { name: "Tailwind CSS", desc: "Utility-first CSS", level: "Advanced" },
+                { name: "TypeScript", desc: "Type-safe JavaScript", level: "Advanced" },
               ].map((skill, index) => (
                 <motion.div
                   key={skill.name}
@@ -545,11 +593,17 @@ export default function Portfolio() {
                 "JavaScript",
                 "TypeScript",
                 "PHP",
+                "Laravel",
                 "MySQL",
+                "PostgreSQL",
+                "Prisma",
                 "HTML/CSS",
                 "Material Design",
                 "MVVM",
                 "Coroutines",
+                "Hilt",
+                "React Native",
+                "Tailwind CSS",
                 "Cloudinary",
                 "Apache",
               ].map((tech, index) => (
@@ -639,7 +693,7 @@ export default function Portfolio() {
                       ) : (
                         <div className="relative h-64 md:h-auto">
                           <Image
-                            src={project.image || "/placeholder.svg"}
+                            src={project.image || "/placeholder.svg "}
                             alt={project.title}
                             fill
                             className="object-cover"
