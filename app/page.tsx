@@ -317,7 +317,7 @@ export default function Portfolio() {
       type: "Full-Stack Web App",
       icon: <Vote className="w-6 h-6" />,
       githubUrl: "https://github.com/NOTMORSE-PROG/VoteHubPH",
-      documentationUrl: "https://utfs.io/f/D8rLLdYxj7dg4Axco3m2oJitbd5aKzOBux3kRCAQF1LcVmyg",
+      documentationUrl: "https://thkp19wmdj.ufs.sh/f/D8rLLdYxj7dgx1JS8kv4YR7XEpuJeTaktG8ZFLDbzyBqH3w1",
     },
   ]
 
@@ -693,7 +693,7 @@ export default function Portfolio() {
                       ) : (
                         <div className="relative h-64 md:h-auto">
                           <Image
-                            src={project.image || "/placeholder.svg "}
+                            src={project.images[0] || "/placeholder.svg"}
                             alt={project.title}
                             fill
                             className="object-cover"
