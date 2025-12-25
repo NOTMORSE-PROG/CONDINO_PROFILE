@@ -17,6 +17,7 @@ import {
   Download,
   Github,
   Vote,
+  MapPin,
 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
@@ -400,11 +401,19 @@ export default function Portfolio() {
               <br />
               <span className="text-gray-800 dark:text-white">Condino</span>
             </h1>
-            <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-8 max-w-3xl mx-auto">
-              Software Developer
+            <p className="text-xl md:text-2xl mb-4 max-w-3xl mx-auto">
+              <span className="font-semibold bg-gradient-to-r from-blue-600 to-teal-600 bg-clip-text text-transparent">
+                Software Developer
+              </span>
               <br />
-              Crafting innovative solutions with modern technologies
+              <span className="text-gray-600 dark:text-gray-300">
+                Crafting innovative solutions with modern technologies
+              </span>
             </p>
+            <div className="flex items-center justify-center gap-2 text-gray-600 dark:text-gray-400 mb-8">
+              <MapPin className="w-5 h-5" />
+              <span className="text-lg">Metro Manila, Philippines</span>
+            </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
                 size="lg"

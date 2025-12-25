@@ -3,6 +3,7 @@
 # Mark Andrei Condino
 
 ### Software Developer | Web & Mobile Applications
+📍 Metro Manila, Philippines
 
 [![Portfolio](https://img.shields.io/badge/Portfolio-Live-blue?style=for-the-badge&logo=vercel)](https://condino-profile.vercel.app)
 [![GitHub](https://img.shields.io/badge/GitHub-NOTMORSE--PROG-181717?style=for-the-badge&logo=github)](https://github.com/NOTMORSE-PROG)
