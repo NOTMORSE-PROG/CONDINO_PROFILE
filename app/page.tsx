@@ -16,6 +16,7 @@ import {
   ChevronDown,
   Download,
   Github,
+  Linkedin,
   Vote,
   MapPin,
 } from "lucide-react"
@@ -817,6 +818,25 @@ export default function Portfolio() {
             viewport={{ once: true }}
             className="text-center"
           >
+            <div className="flex justify-center gap-6 mb-8">
+              <a
+                href="https://www.linkedin.com/in/mark-andrei-condino-0323a5327"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-4 rounded-full bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-blue-700 dark:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-900/30 hover:border-blue-400 transition-all duration-200 shadow-sm hover:shadow-md"
+              >
+                <Linkedin className="w-7 h-7" />
+              </a>
+              <a
+                href="https://github.com/NOTMORSE-PROG"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-4 rounded-full bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-gray-800 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 hover:border-gray-400 transition-all duration-200 shadow-sm hover:shadow-md"
+              >
+                <Github className="w-7 h-7" />
+              </a>
+            </div>
+
             <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900 dark:text-white">Let's Work Together</h2>
             <p className="text-lg text-gray-700 dark:text-gray-200 mb-12 max-w-2xl mx-auto">
               Ready to bring your ideas to life? I'm always excited to work on new projects and collaborate with fellow
