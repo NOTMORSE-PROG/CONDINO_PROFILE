@@ -12,7 +12,7 @@
 
 <br />
 
-<img src="https://utfs.io/f/D8rLLdYxj7dgWezinVxpzPSwLqOM1oDT3nl2t9C0fYXkRsrN" alt="Mark Andrei Condino" width="200" style="border-radius: 50%;" />
+<img src="public/images/mark-profile.jpg" alt="Mark Andrei Condino" width="200" style="border-radius: 50%;" />
 
 *Crafting innovative solutions with modern technologies*
 

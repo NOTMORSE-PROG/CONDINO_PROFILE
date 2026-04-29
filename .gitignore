@@ -29,3 +29,6 @@ next-env.d.ts
 # scripts and upload files
 /scripts/
 url-mapping.json
+
+# claude
+CLAUDE.md

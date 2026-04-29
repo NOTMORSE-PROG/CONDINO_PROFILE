@@ -164,14 +164,14 @@ export default function Portfolio() {
       description:
         "A modern Android marketplace application designed specifically for students of the Technological Institute of the Philippines (T.I.P). Built with Kotlin and Jetpack Compose, featuring secure authentication, smart pickup system, and comprehensive e-commerce functionality.",
       images: [
-        "https://utfs.io/f/D8rLLdYxj7dgdeVxh6W5NnIGvPMQTCt6UOpyVu1iJ7ZhqKeY",
-        "https://utfs.io/f/D8rLLdYxj7dgZMbPPGhT1zGeqEpUh9usSwcPWtbXVJyLdIF6",
-        "https://utfs.io/f/D8rLLdYxj7dgbawhfFWe1Ti2nsXVJUw7jxyWNqozIP9g8QfA",
-        "https://utfs.io/f/D8rLLdYxj7dgrUk6OaRJ7voajpfNuiZyhb2Ew6Xsl9GQdDKS",
-        "https://utfs.io/f/D8rLLdYxj7dgPHRnJCP8w04VkGSBJ658ZnqW3aFgMixKUDhu",
-        "https://utfs.io/f/D8rLLdYxj7dgDhX9uHYxj7dgmQqZGuaL3VBUc9zO8TRJ0fMi",
-        "https://utfs.io/f/D8rLLdYxj7dg1DRq3CoSixMG0jUznhsECRJXaYwF6kApLqgW",
-        "https://utfs.io/f/D8rLLdYxj7dgZLAy4shT1zGeqEpUh9usSwcPWtbXVJyLdIF6",
+        "/images/tip-mart/tip-mart-1.png",
+        "/images/tip-mart/tip-mart-2.png",
+        "/images/tip-mart/tip-mart-3.png",
+        "/images/tip-mart/tip-mart-4.png",
+        "/images/tip-mart/tip-mart-5.png",
+        "/images/tip-mart/tip-mart-6.png",
+        "/images/tip-mart/tip-mart-7.png",
+        "/images/tip-mart/tip-mart-8.png",
       ],
       imageLabels: [
         "Create Listing and Product Details",
@@ -197,20 +197,20 @@ export default function Portfolio() {
       type: "Mobile App",
       icon: <Smartphone className="w-6 h-6" />,
       githubUrl: "https://github.com/NOTMORSE-PROG/T.I.P-MART",
-      documentationUrl: "https://utfs.io/f/D8rLLdYxj7dg3Yf9lOdH5gh02zf6qENUyrjFYAIvue3JlXTx",
+      documentationUrl: "/docs/tip-mart-documentation.pdf",
     },
     {
       title: "VocaNova 2025",
       description:
         "A comprehensive vocabulary learning Android application with interactive lessons, engaging mini-games, and gamification system. Features structured learning paths, achievement tracking, and immersive educational games with Material Design 3 interface.",
       images: [
-        "https://utfs.io/f/D8rLLdYxj7dgKejMvCOnlPFOuhgIcRqxZbDLJUwekVHr3N7Y",
-        "https://utfs.io/f/D8rLLdYxj7dgqBtek9QWb6t3cKueArC2p1ldzhmfLo7En9aO",
-        "https://utfs.io/f/D8rLLdYxj7dg8LApBE2AwrVUKSkNIhPZu9OEp7x12eafWizF",
-        "https://utfs.io/f/D8rLLdYxj7dg1ijuV5oSixMG0jUznhsECRJXaYwF6kApLqgW",
-        "https://utfs.io/f/D8rLLdYxj7dgHL9kFnbvEgOlV0x5InZe6ySkjKND7CcqsPQR",
-        "https://utfs.io/f/D8rLLdYxj7dg1N2AfwoSixMG0jUznhsECRJXaYwF6kApLqgW",
-        "https://utfs.io/f/D8rLLdYxj7dg1nrr0aoSixMG0jUznhsECRJXaYwF6kApLqgW",
+        "/images/vocanova/vocanova-1.png",
+        "/images/vocanova/vocanova-2.png",
+        "/images/vocanova/vocanova-3.png",
+        "/images/vocanova/vocanova-4.png",
+        "/images/vocanova/vocanova-5.png",
+        "/images/vocanova/vocanova-6.png",
+        "/images/vocanova/vocanova-7.png",
       ],
       imageLabels: [
         "Shop & Achievements",
@@ -235,23 +235,23 @@ export default function Portfolio() {
       type: "Educational App",
       icon: <Code className="w-6 h-6" />,
       githubUrl: "https://github.com/NOTMORSE-PROG/VOCANOVA",
-      documentationUrl: "https://utfs.io/f/D8rLLdYxj7dgwTyZaUK7JnCpIoENMwDqHuGxvh3YFL4BlRry",
+      documentationUrl: "/docs/vocanova-documentation.pdf",
     },
     {
       title: "FilipinoBlog",
       description:
         "A comprehensive blogging platform specifically designed for Filipino bloggers and writers. Features complete user management, analytics dashboard, community engagement tools, and a beautiful Filipino-themed design with cultural sensitivity.",
       images: [
-        "https://utfs.io/f/D8rLLdYxj7dgwTIImbg7JnCpIoENMwDqHuGxvh3YFL4BlRry",
-        "https://utfs.io/f/D8rLLdYxj7dgF8HbhAXLiweFRd9QOjYKJ2snbghqoyHk6T8G",
-        "https://utfs.io/f/D8rLLdYxj7dgCV2Dj2nrIouyYGlFatkHAbVe1inQ54WPjOMd",
-        "https://utfs.io/f/D8rLLdYxj7dgk2d6DG3joeBiyL1g0aNlpZwS9Y2McW3vEfFX",
-        "https://utfs.io/f/D8rLLdYxj7dgHa1JZdbvEgOlV0x5InZe6ySkjKND7CcqsPQR",
-        "https://utfs.io/f/D8rLLdYxj7dgbRmcAAWe1Ti2nsXVJUw7jxyWNqozIP9g8QfA",
-        "https://utfs.io/f/D8rLLdYxj7dgxsanGP4YR7XEpuJeTaktG8ZFLDbzyBqH3w1s",
-        "https://utfs.io/f/D8rLLdYxj7dgw4wW4h7JnCpIoENMwDqHuGxvh3YFL4BlRryS",
-        "https://utfs.io/f/D8rLLdYxj7dgLInNreEsMvnWPV5GuziBEOcSC8KQUAZJbI0l",
-        "https://utfs.io/f/D8rLLdYxj7dggxhH5Nafaqsn5vAlwTPbeJcdRor29Gzjm18Z",
+        "/images/filipinoblog/filipinoblog-1.png",
+        "/images/filipinoblog/filipinoblog-2.png",
+        "/images/filipinoblog/filipinoblog-3.png",
+        "/images/filipinoblog/filipinoblog-4.png",
+        "/images/filipinoblog/filipinoblog-5.png",
+        "/images/filipinoblog/filipinoblog-6.png",
+        "/images/filipinoblog/filipinoblog-7.png",
+        "/images/filipinoblog/filipinoblog-8.png",
+        "/images/filipinoblog/filipinoblog-9.png",
+        "/images/filipinoblog/filipinoblog-10.png",
       ],
       imageLabels: [
         "My Post Page",
@@ -279,21 +279,21 @@ export default function Portfolio() {
       type: "Web Platform",
       icon: <Globe className="w-6 h-6" />,
       githubUrl: "https://github.com/NOTMORSE-PROG/Filipino-Blog",
-      documentationUrl: "https://utfs.io/f/D8rLLdYxj7dgH9HAN7bvEgOlV0x5InZe6ySkjKND7CcqsPQR",
+      documentationUrl: "/docs/filipinoblog-documentation.pdf",
     },
     {
       title: "VoteHubPH",
       description:
         "A comprehensive voting platform designed to empower Filipino citizens with transparent candidate information, community insights, and real-time engagement across all levels of Philippine government. Features location-based filtering, community engagement, and admin moderation.",
       images: [
-        "https://utfs.io/f/D8rLLdYxj7dgQ2WeVICi9est7YCJ2z1RkFoSLdfQhIcZHgun",
-        "https://utfs.io/f/D8rLLdYxj7dgJI2myfAsnCibyTIY9ueGqWFpj14VNLc08akz",
-        "https://utfs.io/f/D8rLLdYxj7dgG8ms4Oez7FEZ0RmdYQ1PB8ClKLxVajuHXNq6",
-        "https://utfs.io/f/D8rLLdYxj7dgMcu2lpK10OC65fBRyquLFe9YvEGnziI48Atg",
-        "https://utfs.io/f/D8rLLdYxj7dg4oAJuuwm2oJitbd5aKzOBux3kRCAQF1LcVmy",
-        "https://utfs.io/f/D8rLLdYxj7dg2DPdK9Hf3guHyGNcpiRO1UtKzA0LQPhmsZ6J",
-        "https://utfs.io/f/D8rLLdYxj7dgk52wrLI3joeBiyL1g0aNlpZwS9Y2McW3vEfF",
-        "https://utfs.io/f/D8rLLdYxj7dgMqqtcgaK10OC65fBRyquLFe9YvEGnziI48At",
+        "/images/votehubph/votehubph-1.jpg",
+        "/images/votehubph/votehubph-2.jpg",
+        "/images/votehubph/votehubph-3.jpg",
+        "/images/votehubph/votehubph-4.jpg",
+        "/images/votehubph/votehubph-5.jpg",
+        "/images/votehubph/votehubph-6.jpg",
+        "/images/votehubph/votehubph-7.jpg",
+        "/images/votehubph/votehubph-8.jpg",
       ],
       imageLabels: [
         "Homepage",
@@ -319,7 +319,7 @@ export default function Portfolio() {
       type: "Full-Stack Web App",
       icon: <Vote className="w-6 h-6" />,
       githubUrl: "https://github.com/NOTMORSE-PROG/VoteHubPH",
-      documentationUrl: "https://thkp19wmdj.ufs.sh/f/D8rLLdYxj7dgx1JS8kv4YR7XEpuJeTaktG8ZFLDbzyBqH3w1",
+      documentationUrl: "/docs/votehubph-documentation.pdf",
     },
   ]
 
@@ -427,7 +427,7 @@ export default function Portfolio() {
                 Get In Touch
               </Button>
               <Button size="lg" variant="outline" asChild>
-                <a href="https://thkp19wmdj.ufs.sh/f/D8rLLdYxj7dgNj7vrds9K72RADpPCscIoqU6FHayWekdMig3" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+                <a href="/docs/condino_resume.pdf" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
                   <Download className="w-5 h-5" />
                   Download Resume
                 </a>
@@ -488,7 +488,7 @@ export default function Portfolio() {
               >
                 <div className="relative w-64 h-64 md:w-80 md:h-80 mx-auto">
                   <Image
-                    src="https://utfs.io/f/D8rLLdYxj7dgWezinVxpzPSwLqOM1oDT3nl2t9C0fYXkRsrN"
+                    src="/images/mark-profile.jpg"
                     alt="Mark Andrei Condino - Professional Photo"
                     fill
                     className="object-cover rounded-2xl shadow-2xl"
