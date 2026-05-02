@@ -342,6 +342,53 @@ export default function Portfolio() {
       ],
       documentationUrl: "/docs/codecompass-documentation.pdf",
     },
+    {
+      title: "SafeTransit",
+      description:
+        "A safety-first navigation mobile app designed for women commuters in Philippine cities. Built with React Native and Expo SDK 54, SafeTransit pairs intelligent multi-modal route planning with community-powered safety alerts, family location sharing, and a discreet Silent Panic Button to create a complete journey protection network.",
+      images: [
+        "/images/safetransit/safetransit-1.jpg",
+        "/images/safetransit/safetransit-2.jpg",
+        "/images/safetransit/safetransit-3.jpg",
+        "/images/safetransit/safetransit-4.jpg",
+        "/images/safetransit/safetransit-5.jpg",
+        "/images/safetransit/safetransit-6.jpg",
+        "/images/safetransit/safetransit-7.jpg",
+      ],
+      imageLabels: [
+        "Home — Safety Heatmap",
+        "Tip Detail",
+        "Safe Route Planner",
+        "Community Forum",
+        "Notifications",
+        "Profile & Safety Settings",
+        "Silent Panic Button",
+      ],
+      tech: [
+        "React Native 0.81",
+        "Expo SDK 54",
+        "TypeScript",
+        "NativeWind",
+        "React Native Maps",
+        "Neon PostgreSQL",
+        "Vercel",
+        "UploadThing",
+      ],
+      features: [
+        "Background Protection: continuous location monitoring with danger-zone alerts even when the app is closed",
+        "Silent Panic Button that fires a discreet alert to helpers and emergency contacts",
+        "Quick Exit Screen that instantly disguises the app as a weather forecast for privacy",
+        "Multi-modal Safe Route Planning (Walking, Driving, Transit) with color-coded safety scoring",
+        "Community map tips with admin verification, severity color coding, and intelligent clustering",
+        "Community forum with upvotes, threaded comments, flairs, and photo attachments via UploadThing",
+        "Real-time family location sharing with trusted members and live map indicators",
+        "JWT auth with Google Sign-In, token refresh, and secure bearer-token API communication",
+      ],
+      type: "Safety Navigation App",
+      icon: <MapPin className="w-6 h-6" />,
+      githubUrl: "https://github.com/NOTMORSE-PROG/SafeTransit",
+      documentationUrl: "/docs/safetransit-documentation.pdf",
+    },
   ]
 
   const clientProjects = [
