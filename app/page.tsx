@@ -32,6 +32,9 @@ export default function Portfolio() {
   const [darkMode, setDarkMode] = useState(false)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [showScrollTop, setShowScrollTop] = useState(false)
+  const [personalPage, setPersonalPage] = useState(0)
+  const [clientPage, setClientPage] = useState(0)
+  const PROJECTS_PER_PAGE = 3
   const { scrollYProgress } = useScroll()
   const scaleX = useSpring(scrollYProgress, {
     stiffness: 100,
@@ -579,6 +582,55 @@ export default function Portfolio() {
       icon: <Bird className="w-6 h-6" />,
       documentationUrl: "/docs/alex-quest-documentation.pdf",
     },
+    {
+      title: "LinguaQuest",
+      description:
+        "A gamified listening comprehension mobile app for Grade 7 Filipino learners. Learners sail with Captain Salita and Dagat across seven themed islands of the Listening Sea, mastering one listening skill per island, collecting Shards of Understanding, and silencing Ingay — the Spirit of Noise. Built with Expo SDK 55, React Native 0.83, and a Next.js 16 + Prisma + Neon backend with real-time multiplayer powered by Pusher.",
+      images: [
+        "/images/linguaquest/linguaquest-1.jpg",
+        "/images/linguaquest/linguaquest-2.jpg",
+        "/images/linguaquest/linguaquest-3.jpg",
+        "/images/linguaquest/linguaquest-4.jpg",
+        "/images/linguaquest/linguaquest-5.jpg",
+        "/images/linguaquest/linguaquest-6.jpg",
+        "/images/linguaquest/linguaquest-7.jpg",
+      ],
+      imageLabels: [
+        "Home — Voyage Progress",
+        "Pirate Map — The Listening Sea",
+        "Inside an Island",
+        "Listening Challenge",
+        "Badges & Achievements",
+        "Multiplayer Crew Lobby",
+        "Inside Multiplayer — Treasure Map",
+      ],
+      tech: [
+        "Expo SDK 55",
+        "React Native 0.83",
+        "TypeScript",
+        "NativeWind",
+        "Zustand",
+        "TanStack React Query",
+        "Pusher",
+        "Next.js 16",
+        "Prisma",
+        "Neon PostgreSQL",
+        "Cloudinary",
+      ],
+      features: [
+        "7 story-based islands, each tied to a Grade 7 Filipino listening skill (vocabulary, pacing, main idea, tone, details, sequence, full application)",
+        "Single-play audio discipline with skill-targeted hints and Captain-read explanations on correct answers",
+        "Real-time multiplayer Crew Voyage: 5-round ship-repair battles with crew voting, repair phases, and in-room chat over Pusher channels",
+        "Pin-based progression with 80% pass threshold per pin and per-pin accuracy tracking for student and teacher dashboards",
+        "Voice-acted Captain Salita and Ingay clips, per-island music, and Cloudinary-hosted audio pipeline",
+        "Shard collection, Alingawngaw Crystal assembly, and exportable Certificate of Completion via react-native-view-shot",
+        "Role-based portals: STUDENT play, TEACHER analytics with mistake review, and ADMIN audio upload console",
+        "JWT auth (Jose) with Google OAuth, server-side answer validation, and Expo SecureStore token storage",
+      ],
+      type: "Educational Mobile App",
+      icon: <Gamepad2 className="w-6 h-6" />,
+      documentationUrl: "/docs/linguaquest-documentation.pdf",
+    },
   ]
 
   return (
@@ -962,7 +1014,9 @@ export default function Portfolio() {
           </motion.div>
 
           <div className="space-y-12">
-            {projects.map((project, index) => (
+            {projects
+              .slice(personalPage * PROJECTS_PER_PAGE, (personalPage + 1) * PROJECTS_PER_PAGE)
+              .map((project, index) => (
               <motion.div
                 key={project.title}
                 initial={{ opacity: 0, y: 30 }}
@@ -1099,6 +1153,57 @@ export default function Portfolio() {
               </motion.div>
             ))}
           </div>
+
+          {projects.length > PROJECTS_PER_PAGE && (
+            <div className="mt-12 flex justify-center items-center gap-2 flex-wrap">
+              <Button
+                variant="outline"
+                size="sm"
+                onClick={() => {
+                  setPersonalPage((p) => Math.max(0, p - 1))
+                  document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" })
+                }}
+                disabled={personalPage === 0}
+                className="border-gray-300 dark:border-gray-600 bg-transparent"
+              >
+                <ChevronDown className="w-4 h-4 rotate-90" />
+                Prev
+              </Button>
+              {Array.from({ length: Math.ceil(projects.length / PROJECTS_PER_PAGE) }).map((_, i) => (
+                <Button
+                  key={i}
+                  variant={i === personalPage ? "default" : "outline"}
+                  size="sm"
+                  onClick={() => {
+                    setPersonalPage(i)
+                    document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" })
+                  }}
+                  className={
+                    i === personalPage
+                      ? "w-9 h-9 p-0 bg-blue-600 hover:bg-blue-700 text-white"
+                      : "w-9 h-9 p-0 border-gray-300 dark:border-gray-600 bg-transparent"
+                  }
+                >
+                  {i + 1}
+                </Button>
+              ))}
+              <Button
+                variant="outline"
+                size="sm"
+                onClick={() => {
+                  setPersonalPage((p) =>
+                    Math.min(Math.ceil(projects.length / PROJECTS_PER_PAGE) - 1, p + 1),
+                  )
+                  document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" })
+                }}
+                disabled={personalPage >= Math.ceil(projects.length / PROJECTS_PER_PAGE) - 1}
+                className="border-gray-300 dark:border-gray-600 bg-transparent"
+              >
+                Next
+                <ChevronDown className="w-4 h-4 -rotate-90" />
+              </Button>
+            </div>
+          )}
         </div>
       </section>
 
@@ -1119,7 +1224,9 @@ export default function Portfolio() {
           </motion.div>
 
           <div className="space-y-12">
-            {clientProjects.map((project, index) => (
+            {clientProjects
+              .slice(clientPage * PROJECTS_PER_PAGE, (clientPage + 1) * PROJECTS_PER_PAGE)
+              .map((project, index) => (
               <motion.div
                 key={project.title}
                 initial={{ opacity: 0, y: 30 }}
@@ -1206,6 +1313,59 @@ export default function Portfolio() {
               </motion.div>
             ))}
           </div>
+
+          {clientProjects.length > PROJECTS_PER_PAGE && (
+            <div className="mt-12 flex justify-center items-center gap-2 flex-wrap">
+              <Button
+                variant="outline"
+                size="sm"
+                onClick={() => {
+                  setClientPage((p) => Math.max(0, p - 1))
+                  document.getElementById("clients")?.scrollIntoView({ behavior: "smooth" })
+                }}
+                disabled={clientPage === 0}
+                className="border-gray-300 dark:border-gray-600 bg-transparent"
+              >
+                <ChevronDown className="w-4 h-4 rotate-90" />
+                Prev
+              </Button>
+              {Array.from({ length: Math.ceil(clientProjects.length / PROJECTS_PER_PAGE) }).map(
+                (_, i) => (
+                  <Button
+                    key={i}
+                    variant={i === clientPage ? "default" : "outline"}
+                    size="sm"
+                    onClick={() => {
+                      setClientPage(i)
+                      document.getElementById("clients")?.scrollIntoView({ behavior: "smooth" })
+                    }}
+                    className={
+                      i === clientPage
+                        ? "w-9 h-9 p-0 bg-blue-600 hover:bg-blue-700 text-white"
+                        : "w-9 h-9 p-0 border-gray-300 dark:border-gray-600 bg-transparent"
+                    }
+                  >
+                    {i + 1}
+                  </Button>
+                ),
+              )}
+              <Button
+                variant="outline"
+                size="sm"
+                onClick={() => {
+                  setClientPage((p) =>
+                    Math.min(Math.ceil(clientProjects.length / PROJECTS_PER_PAGE) - 1, p + 1),
+                  )
+                  document.getElementById("clients")?.scrollIntoView({ behavior: "smooth" })
+                }}
+                disabled={clientPage >= Math.ceil(clientProjects.length / PROJECTS_PER_PAGE) - 1}
+                className="border-gray-300 dark:border-gray-600 bg-transparent"
+              >
+                Next
+                <ChevronDown className="w-4 h-4 -rotate-90" />
+              </Button>
+            </div>
+          )}
         </div>
       </section>
 
