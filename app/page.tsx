@@ -19,6 +19,9 @@ import {
   Linkedin,
   Vote,
   MapPin,
+  Plane,
+  Gamepad2,
+  Bird,
 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
@@ -200,44 +203,6 @@ export default function Portfolio() {
       documentationUrl: "/docs/tip-mart-documentation.pdf",
     },
     {
-      title: "VocaNova 2025",
-      description:
-        "A comprehensive vocabulary learning Android application with interactive lessons, engaging mini-games, and gamification system. Features structured learning paths, achievement tracking, and immersive educational games with Material Design 3 interface.",
-      images: [
-        "/images/vocanova/vocanova-1.png",
-        "/images/vocanova/vocanova-2.png",
-        "/images/vocanova/vocanova-3.png",
-        "/images/vocanova/vocanova-4.png",
-        "/images/vocanova/vocanova-5.png",
-        "/images/vocanova/vocanova-6.png",
-        "/images/vocanova/vocanova-7.png",
-      ],
-      imageLabels: [
-        "Shop & Achievements",
-        "Lesson Screen",
-        "About & User Info",
-        "Quiz & Mini Game Screen",
-        "Splash Screen & Home",
-        "Word of the Day & Saved Words",
-        "Mini-Game Example",
-      ],
-      tech: ["Kotlin", "Jetpack Compose", "Firebase", "Material Design 3", "Media3", "Hilt"],
-      features: [
-        "4-Week Structured Learning Program with Video Lessons",
-        "Interactive Mini-Games (Flying Words, Synonym Matching)",
-        "Gamification System with Coins & Power-ups",
-        "Achievement Tracking & Progress Analytics",
-        "Word of the Day with Audio Pronunciation",
-        "Personal Vocabulary Library & Search",
-        "Text-to-Speech Integration",
-        "Offline Learning Capabilities",
-      ],
-      type: "Educational App",
-      icon: <Code className="w-6 h-6" />,
-      githubUrl: "https://github.com/NOTMORSE-PROG/VOCANOVA",
-      documentationUrl: "/docs/vocanova-documentation.pdf",
-    },
-    {
       title: "FilipinoBlog",
       description:
         "A comprehensive blogging platform specifically designed for Filipino bloggers and writers. Features complete user management, analytics dashboard, community engagement tools, and a beautiful Filipino-themed design with cultural sensitivity.",
@@ -321,6 +286,252 @@ export default function Portfolio() {
       githubUrl: "https://github.com/NOTMORSE-PROG/VoteHubPH",
       documentationUrl: "/docs/votehubph-documentation.pdf",
     },
+    {
+      title: "CodeCompass",
+      description:
+        "An AI-driven career guidance platform built for Computer Science students in the Philippines, shipped on both Web and Android. CodeCompass generates personalized learning roadmaps, surfaces local IT jobs and CCS programs, tracks progress through XP and badges, and embeds an AI Career Coach for resume help and interview prep.",
+      images: [
+        "/images/codecompass/codecompass-1.png",
+        "/images/codecompass/codecompass-2.png",
+        "/images/codecompass/codecompass-3.png",
+        "/images/codecompass/codecompass-4.png",
+        "/images/codecompass/codecompass-5.png",
+        "/images/codecompass/codecompass-6.png",
+        "/images/codecompass/codecompass-7.png",
+        "/images/codecompass/codecompass-8.png",
+        "/images/codecompass/codecompass-9.png",
+        "/images/codecompass/codecompass-10.png",
+      ],
+      imageLabels: [
+        "Landing Page (Web)",
+        "Dashboard (Web)",
+        "Career Roadmap (Web)",
+        "Job Board (Web)",
+        "Achievements (Web)",
+        "Login (Android)",
+        "Home (Android)",
+        "Career Roadmap (Android)",
+        "AI Career Coach (Android)",
+        "University Finder (Android)",
+      ],
+      tech: [
+        "React 18",
+        "Vite",
+        "Tailwind CSS",
+        "Java 11",
+        "Material Design 3",
+        "Django REST",
+        "Groq SDK",
+        "WebSocket",
+      ],
+      features: [
+        "AI-generated personalized career roadmaps with skill nodes and XP-gated progression",
+        "AI Career Coach with multi-session chat for resume and interview prep",
+        "Live PH job listings (Careerjet, JSearch) with resume-based recommendations",
+        "Resume Builder with three templates, AI content tools, and ATS scoring",
+        "Certifications tracker (TESDA, Google, AWS) with progress sync",
+        "Philippine university finder with CHED-rated CCS programs",
+        "Gamified achievements: XP, daily streaks, badges, and leaderboards",
+        "Cross-platform: React + Vite web and Java + Material 3 Android on a shared Django REST + Channels backend",
+      ],
+      type: "AI Career Platform",
+      icon: <Code className="w-6 h-6" />,
+      githubUrls: [
+        { label: "Web", url: "https://github.com/NOTMORSE-PROG/CodeCompass_Frontend" },
+        { label: "Android", url: "https://github.com/NOTMORSE-PROG/CodeCompass_Android" },
+      ],
+      documentationUrl: "/docs/codecompass-documentation.pdf",
+    },
+  ]
+
+  const clientProjects = [
+    {
+      title: "PAEC — Philippine Aeronautical English Corpus",
+      description:
+        "A corpus-based training and analysis platform that helps pilots and air traffic controllers improve their aviation English under ICAO standards. Built around authentic ATC communications from RPLL (NAIA), the platform delivers interactive training modules, automated dialogue analysis, and progress tracking.",
+      images: [
+        "/images/paec/paec-1.png",
+        "/images/paec/paec-2.png",
+        "/images/paec/paec-3.png",
+        "/images/paec/paec-4.png",
+        "/images/paec/paec-5.png",
+        "/images/paec/paec-6.png",
+        "/images/paec/paec-7.png",
+      ],
+      imageLabels: [
+        "Landing Page",
+        "Student Dashboard",
+        "Training Modules",
+        "Scenario-Based Simulation",
+        "Analysis Mode",
+        "Annotated Transcript",
+        "Error Breakdown & Recommendations",
+      ],
+      tech: [
+        "Next.js 16",
+        "React 19",
+        "TypeScript",
+        "Tailwind CSS",
+        "PostgreSQL (Neon)",
+        "NextAuth.js 5",
+        "Framer Motion",
+        "Recharts",
+      ],
+      features: [
+        "4 Training Modules: Scenario-Based Simulation, Readback/Hearback Correction, Jumbled Clearance, Pronunciation Drill",
+        "Automated ICAO compliance analysis of PDF, DOCX, and text transcripts",
+        "Phase-aware engine for APP/DEP, GND, and RAMP communications",
+        "Web Speech API pronunciation feedback against ICAO standards",
+        "Session history, performance trends, and per-category progress charts",
+        "Email + Google OAuth auth with NextAuth.js 5 (JWT, bcrypt)",
+        "PDF and CSV export of analysis results",
+        "Backed by PAEC Corpus v3.4 — RPLL ATC recordings (Feb–Mar 2025)",
+      ],
+      type: "Aviation Training Platform",
+      icon: <Plane className="w-6 h-6" />,
+      documentationUrl: "/docs/paec-documentation.pdf",
+    },
+    {
+      title: "VocaNova 2025",
+      description:
+        "A comprehensive vocabulary learning Android application with interactive lessons, engaging mini-games, and gamification system. Features structured learning paths, achievement tracking, and immersive educational games with Material Design 3 interface.",
+      images: [
+        "/images/vocanova/vocanova-1.png",
+        "/images/vocanova/vocanova-2.png",
+        "/images/vocanova/vocanova-3.png",
+        "/images/vocanova/vocanova-4.png",
+        "/images/vocanova/vocanova-5.png",
+        "/images/vocanova/vocanova-6.png",
+        "/images/vocanova/vocanova-7.png",
+      ],
+      imageLabels: [
+        "Shop & Achievements",
+        "Lesson Screen",
+        "About & User Info",
+        "Quiz & Mini Game Screen",
+        "Splash Screen & Home",
+        "Word of the Day & Saved Words",
+        "Mini-Game Example",
+      ],
+      tech: ["Kotlin", "Jetpack Compose", "Firebase", "Material Design 3", "Media3", "Hilt"],
+      features: [
+        "4-Week Structured Learning Program with Video Lessons",
+        "Interactive Mini-Games (Flying Words, Synonym Matching)",
+        "Gamification System with Coins & Power-ups",
+        "Achievement Tracking & Progress Analytics",
+        "Word of the Day with Audio Pronunciation",
+        "Personal Vocabulary Library & Search",
+        "Text-to-Speech Integration",
+        "Offline Learning Capabilities",
+      ],
+      type: "Educational App",
+      icon: <Code className="w-6 h-6" />,
+      documentationUrl: "/docs/vocanova-documentation.pdf",
+    },
+    {
+      title: "TriCognia Ville",
+      description:
+        "A story-based gamified reading application that helps Grade 7 learners rebuild a faded village by completing reading and comprehension quests. As students master each task, buildings return from grayscale to full color, livening the town with characters, lights, and ambient activity. Built as a landscape Android app in Godot 4.6 with a Next.js 16 + Neon PostgreSQL backend and Groq-powered adaptive feedback.",
+      images: [
+        "/images/tricognia-ville/tricognia-ville-1.png",
+        "/images/tricognia-ville/tricognia-ville-2.png",
+        "/images/tricognia-ville/tricognia-ville-3.png",
+        "/images/tricognia-ville/tricognia-ville-4.png",
+        "/images/tricognia-ville/tricognia-ville-5.png",
+        "/images/tricognia-ville/tricognia-ville-6.png",
+        "/images/tricognia-ville/tricognia-ville-7.png",
+        "/images/tricognia-ville/tricognia-ville-8.png",
+        "/images/tricognia-ville/tricognia-ville-9.png",
+        "/images/tricognia-ville/tricognia-ville-10.png",
+      ],
+      imageLabels: [
+        "Onboarding",
+        "Reading Assessment",
+        "Reading Level Reveal",
+        "Village — Faded Start",
+        "Tutorial / Practice / Mission Picker",
+        "Mission Mode",
+        "Story Dialogue",
+        "Story Dialogue (cont.)",
+        "Player Profile & Badges",
+        "Village — Restored",
+      ],
+      tech: [
+        "Godot 4.6",
+        "GDScript",
+        "Next.js 16",
+        "TypeScript",
+        "PostgreSQL (Neon)",
+        "Drizzle ORM",
+        "Groq SDK",
+        "Tailwind CSS",
+      ],
+      features: [
+        "6 Quest Types: Multiple Choice, Drag-and-Drop, Read-Aloud, Fluency Drill, Tap-Target, Punctuation Read",
+        "Grayscale-to-color village restoration via custom canvas-item shader",
+        "AI-powered adaptive feedback and hint scaffolding via Groq",
+        "Speech-recognized read-aloud and fluency drills with mic-aware audio ducking",
+        "Story-driven narrative arc with reflection prompts and unlock cutscenes",
+        "JOSE-signed JWT auth with bcrypt and per-learner data isolation",
+        "Cloud sync over Drizzle ORM + Neon PostgreSQL with offline backoff",
+        "Printable completion certificates generated with pdf-lib",
+      ],
+      type: "Educational Game (Android)",
+      icon: <Gamepad2 className="w-6 h-6" />,
+      documentationUrl: "/docs/tricognia-ville-documentation.pdf",
+    },
+    {
+      title: "Alex's Quest",
+      description:
+        "A story-driven English learning mobile app that guides grade-school learners through five chapters of an adventurous city-to-jungle quest with a parrot named Alex. Learners practice sentence construction, grammar, and pronunciation with real-time on-device speech scoring. Built cross-platform with Expo SDK 55, React Native 0.83, and a bundled whisper.rn model so student audio never leaves the device.",
+      images: [
+        "/images/alex-quest/alex-quest-1.png",
+        "/images/alex-quest/alex-quest-2.png",
+        "/images/alex-quest/alex-quest-3.png",
+        "/images/alex-quest/alex-quest-4.png",
+        "/images/alex-quest/alex-quest-5.png",
+        "/images/alex-quest/alex-quest-6.png",
+        "/images/alex-quest/alex-quest-7.png",
+        "/images/alex-quest/alex-quest-8.png",
+        "/images/alex-quest/alex-quest-9.png",
+        "/images/alex-quest/alex-quest-10.png",
+      ],
+      imageLabels: [
+        "Onboarding",
+        "Home",
+        "Story Map",
+        "Vocabulary",
+        "Word of the Day",
+        "Chapter Challenge",
+        "Assessment — Pronunciation Feedback",
+        "Assessment (cont.)",
+        "Assessment (cont.)",
+        "Badges & Progress",
+      ],
+      tech: [
+        "Expo SDK 55",
+        "React Native 0.83",
+        "React 19",
+        "TypeScript",
+        "NativeWind",
+        "Zustand",
+        "whisper.rn",
+        "Reanimated + Lottie",
+      ],
+      features: [
+        "5 story-based chapters mapped to grammar learning objectives (sentence construction → full application)",
+        "On-device Whisper transcription (whisper.rn) — student audio never leaves the device",
+        "Three-factor scoring (Content 50% / Pronunciation 40% / Fluency 10%) with phoneme-level feedback via CMU dictionary + Needleman–Wunsch alignment",
+        "Multi-question types: Identify, Build, Speak, Choice, Rival — with adaptive escalating hints",
+        "Story map with animal companion rewards, badges, and certificate of completion",
+        "PIN-gated Teacher Portal with assessment history, transcripts, and per-student analytics",
+        "Lottie character animations and chapter-specific background music",
+        "Zustand-backed local progress, expo-router typed navigation, EAS Build pipeline",
+      ],
+      type: "Cross-Platform Mobile App",
+      icon: <Bird className="w-6 h-6" />,
+      documentationUrl: "/docs/alex-quest-documentation.pdf",
+    },
   ]
 
   return (
@@ -345,7 +556,7 @@ export default function Portfolio() {
 
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center space-x-8">
-              {["About", "Skills", "Projects", "Contact"].map((item) => (
+              {["About", "Skills", "Projects", "Clients", "Contact"].map((item) => (
                 <button
                   key={item}
                   onClick={() => scrollToSection(item.toLowerCase())}
@@ -377,7 +588,7 @@ export default function Portfolio() {
               animate={{ opacity: 1, y: 0 }}
               className="md:hidden py-4 border-t border-gray-200 dark:border-gray-700"
             >
-              {["About", "Skills", "Projects", "Contact"].map((item) => (
+              {["About", "Skills", "Projects", "Clients", "Contact"].map((item) => (
                 <button
                   key={item}
                   onClick={() => scrollToSection(item.toLowerCase())}
@@ -697,7 +908,7 @@ export default function Portfolio() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-800 dark:text-white">Featured Projects</h2>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-800 dark:text-white">Personal Projects</h2>
             <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
               A showcase of innovative applications built with modern technologies
             </p>
@@ -779,24 +990,151 @@ export default function Portfolio() {
 
                         {/* Project Links */}
                         <div className="flex flex-wrap gap-3">
-                          {project.githubUrl && (
-                            <Button
-                              size="sm"
-                              variant="outline"
-                              asChild
-                              className="border-gray-300 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-700 bg-transparent"
+                          {project.githubUrls
+                            ? project.githubUrls.map((g) => (
+                                <Button
+                                  key={g.url}
+                                  size="sm"
+                                  variant="outline"
+                                  asChild
+                                  className="border-gray-300 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-700 bg-transparent"
+                                >
+                                  <a
+                                    href={g.url}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="flex items-center gap-2 text-gray-700 dark:text-gray-300"
+                                  >
+                                    <Github className="w-4 h-4" />
+                                    View {g.label} Code
+                                  </a>
+                                </Button>
+                              ))
+                            : project.githubUrl && (
+                                <Button
+                                  size="sm"
+                                  variant="outline"
+                                  asChild
+                                  className="border-gray-300 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-700 bg-transparent"
+                                >
+                                  <a
+                                    href={project.githubUrl}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="flex items-center gap-2 text-gray-700 dark:text-gray-300"
+                                  >
+                                    <Github className="w-4 h-4" />
+                                    View Code
+                                  </a>
+                                </Button>
+                              )}
+                          <Button
+                            size="sm"
+                            variant="outline"
+                            asChild
+                            className="border-gray-300 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-700 bg-transparent"
+                          >
+                            <a
+                              href={project.documentationUrl}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="flex items-center gap-2 text-gray-700 dark:text-gray-300"
                             >
-                              <a
-                                href={project.githubUrl}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="flex items-center gap-2 text-gray-700 dark:text-gray-300"
+                              <Download className="w-4 h-4" />
+                              Documentation
+                            </a>
+                          </Button>
+                        </div>
+                      </CardContent>
+                    </div>
+                  </div>
+                </Card>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Client Projects Section */}
+      <section id="clients" className="py-20 bg-gray-50 dark:bg-gray-800">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-800 dark:text-white">Client Projects</h2>
+            <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+              Production work delivered for external clients and partners
+            </p>
+          </motion.div>
+
+          <div className="space-y-12">
+            {clientProjects.map((project, index) => (
+              <motion.div
+                key={project.title}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.2 }}
+                viewport={{ once: true }}
+              >
+                <Card className="overflow-hidden hover:shadow-2xl transition-all duration-300 bg-white dark:bg-gray-900 border-gray-200 dark:border-gray-700">
+                  <div className={`grid md:grid-cols-2 gap-0 ${index % 2 === 1 ? "md:grid-flow-col-dense" : ""}`}>
+                    <div className={`relative ${index % 2 === 1 ? "md:col-start-2" : ""}`}>
+                      <div className="h-96 md:h-[500px]">
+                        <ImageSlideshow images={project.images} alt={project.title} labels={project.imageLabels} />
+                      </div>
+                    </div>
+                    <div className="p-8 bg-white dark:bg-gray-900">
+                      <CardHeader className="p-0 mb-6">
+                        <div className="flex items-center gap-3 mb-2">
+                          <div className="text-blue-600 dark:text-blue-400">{project.icon}</div>
+                          <Badge
+                            variant="secondary"
+                            className="bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200"
+                          >
+                            {project.type}
+                          </Badge>
+                        </div>
+                        <CardTitle className="text-2xl md:text-3xl mb-3 text-gray-900 dark:text-white">
+                          {project.title}
+                        </CardTitle>
+                        <CardDescription className="text-base text-gray-600 dark:text-gray-300">
+                          {project.description}
+                        </CardDescription>
+                      </CardHeader>
+
+                      <CardContent className="p-0">
+                        <div className="mb-6">
+                          <h4 className="font-semibold mb-3 text-gray-800 dark:text-white">Key Features:</h4>
+                          <ul className="space-y-2">
+                            {project.features.slice(0, 4).map((feature, idx) => (
+                              <li key={idx} className="flex items-start gap-2 text-sm text-gray-600 dark:text-gray-300">
+                                <div className="w-1.5 h-1.5 bg-blue-500 dark:bg-blue-400 rounded-full mt-2 flex-shrink-0" />
+                                {feature}
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+
+                        <div className="mb-6">
+                          <h4 className="font-semibold mb-3 text-gray-800 dark:text-white">Technologies:</h4>
+                          <div className="flex flex-wrap gap-2">
+                            {project.tech.map((tech) => (
+                              <Badge
+                                key={tech}
+                                variant="outline"
+                                className="border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300"
                               >
-                                <Github className="w-4 h-4" />
-                                View Code
-                              </a>
-                            </Button>
-                          )}
+                                {tech}
+                              </Badge>
+                            ))}
+                          </div>
+                        </div>
+
+                        <div className="flex flex-wrap gap-3">
                           <Button
                             size="sm"
                             variant="outline"

@@ -32,3 +32,7 @@ url-mapping.json
 
 # claude
 CLAUDE.md
+.claude/
+.claude-code/
+**/claude*
+**/CLAUDE*
