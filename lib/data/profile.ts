@@ -11,9 +11,9 @@ export const profile = {
   resumeUrl: "/docs/condino_resume.pdf",
   photo: "/images/mark-profile.jpg",
   bio: [
-    "Resourceful Software Developer with practical experience delivering dynamic websites and robust Android applications. I specialize in project development using React.js, Next.js, PHP, Kotlin, and Firebase, with a proven track record of launching apps and platforms that solve real-world problems and support student and community engagement.",
-    "As a freelancer since 2023, I've delivered 10+ responsive websites and 3+ Android applications with Firebase integration. I've also worked as a Software Developer at Ethos Bytes (Australia), collaborating on design, development, and testing using Docker, Django, React, and implementing OAuth2.0 authentication with Microsoft Entra.",
-    "Beyond coding, I serve as Open Source President leading 50+ active members in programming excellence, and as Lead Cloud Security Officer implementing AWS compliance standards. Known for creative solutions, adaptability, and technical leadership with strong communication and project management skills.",
+    "I build websites and Android apps with React, Next.js, Kotlin, and Firebase — products that solve real problems for students and communities.",
+    "Freelancing since 2023, I've shipped 10+ responsive websites and 3+ Android apps. At Ethos Bytes (Australia) I worked across design, development, and testing with Docker, Django, and React, and implemented OAuth 2.0 authentication with Microsoft Entra.",
+    "Outside client work, I lead 50+ members as Open Source President and serve as Lead Cloud Security Officer, implementing AWS compliance standards.",
   ],
   stats: [
     { value: "10+", label: "Websites Delivered" },
