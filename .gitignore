@@ -30,6 +30,11 @@ next-env.d.ts
 /scripts/
 url-mapping.json
 
+# playwright / mcp browser tooling
+/.playwright-mcp/
+/test-results/
+/playwright-report/
+
 # claude
 CLAUDE.md
 .claude/
