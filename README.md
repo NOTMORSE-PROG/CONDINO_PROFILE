@@ -22,12 +22,12 @@
 
 ## About Me
 
-Resourceful **Software Developer** with practical experience delivering dynamic websites and robust Android applications. I specialize in project development using **React.js**, **Next.js**, **PHP**, **Kotlin**, and **Firebase**, with a proven track record of launching apps and platforms that solve real-world problems.
+I build websites and Android apps with **React**, **Next.js**, **Kotlin**, and **Firebase** — products that solve real problems for students and communities.
 
-- Freelancer since 2023 - delivered **10+ responsive websites** and **3+ Android applications**
-- Software Developer at **Ethos Bytes (Australia)** - worked with Docker, Django, React, OAuth2.0
-- **Open Source President** - leading 50+ active members in programming excellence
-- **Lead Cloud Security Officer** - implementing AWS compliance standards
+- Freelancing since 2023 — shipped **10+ responsive websites** and **3+ Android apps**
+- Software Developer at **Ethos Bytes (Australia)** — Docker, Django, React, and OAuth 2.0 with Microsoft Entra
+- **Open Source President** — leading 50+ members
+- **Lead Cloud Security Officer** — implementing AWS compliance standards
 
 ---
 
@@ -81,6 +81,30 @@ A modern marketplace application for students of the Technological Institute of 
 </td>
 <td width="50%">
 
+### CodeCompass
+**AI Career Platform**
+
+An AI-driven career guidance platform for Computer Science students in the Philippines, shipped on Web and Android — personalized learning roadmaps, local IT jobs, an AI Career Coach, and gamified progress tracking.
+
+**Tech:** React 18, Vite, Django REST, Java 11, Material Design 3
+
+[![Web](https://img.shields.io/badge/Web-GitHub-181717?style=flat-square&logo=github)](https://github.com/NOTMORSE-PROG/CodeCompass_Frontend) [![Android](https://img.shields.io/badge/Android-GitHub-181717?style=flat-square&logo=github)](https://github.com/NOTMORSE-PROG/CodeCompass_Android)
+
+</td>
+</tr>
+<tr>
+<td width="50%">
+
+### PAEC
+**Aviation Training Platform**
+
+A corpus-based training platform that helps pilots and air traffic controllers improve their aviation English under ICAO standards, built around authentic RPLL (NAIA) ATC communications with interactive modules and automated dialogue analysis.
+
+**Tech:** Next.js 16, React 19, TypeScript, PostgreSQL, NextAuth.js 5
+
+</td>
+<td width="50%">
+
 ### VocaNova 2025
 **Educational Learning App**
 
@@ -89,32 +113,6 @@ Comprehensive vocabulary learning Android app with interactive lessons, engaging
 **Tech:** Kotlin, Jetpack Compose, Firebase, Hilt
 
 [![GitHub](https://img.shields.io/badge/View_Code-GitHub-181717?style=flat-square&logo=github)](https://github.com/NOTMORSE-PROG/VOCANOVA)
-
-</td>
-</tr>
-<tr>
-<td width="50%">
-
-### FilipinoBlog
-**Web Blogging Platform**
-
-A comprehensive blogging platform for Filipino bloggers featuring user management, analytics dashboard, and community engagement with beautiful Filipino-themed design.
-
-**Tech:** Next.js, React, Firebase, Tailwind CSS
-
-[![GitHub](https://img.shields.io/badge/View_Code-GitHub-181717?style=flat-square&logo=github)](https://github.com/NOTMORSE-PROG/Filipino-Blog)
-
-</td>
-<td width="50%">
-
-### VoteHubPH
-**Full-Stack Voting Platform**
-
-Comprehensive voting platform empowering Filipino citizens with transparent candidate information, community insights, and real-time engagement across all government levels.
-
-**Tech:** Next.js 14, TypeScript, Laravel 11, PostgreSQL, Prisma
-
-[![GitHub](https://img.shields.io/badge/View_Code-GitHub-181717?style=flat-square&logo=github)](https://github.com/NOTMORSE-PROG/VoteHubPH)
 
 </td>
 </tr>
