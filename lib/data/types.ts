@@ -16,6 +16,7 @@ export interface Project {
   tech: string[]
   features: string[]
   githubUrls?: { label?: string; url: string }[]
+  liveUrl?: string
   documentationUrl: string
 }
 
