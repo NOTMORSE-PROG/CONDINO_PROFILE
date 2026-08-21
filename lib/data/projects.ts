@@ -2,6 +2,47 @@ import type { Project } from "./types"
 
 export const projects: Project[] = [
   {
+    slug: "streampay",
+    title: "StreamPay",
+    category: "personal",
+    type: "Blockchain Fintech Platform",
+    featured: true,
+    description:
+      "An on-chain salary streaming platform built for the APAC Stellar Hackathon. Employers escrow a pay period in a Soroban contract, wages accrue every second from ledger time, and workers can cash out earned funds at any time. StreamPay combines a responsive employer dashboard, a mobile-first worker PWA, public transaction receipts, and fair on-chain cancellation on Stellar testnet.",
+    images: [
+      { src: "/images/streampay/streampay-1.png", label: "Landing Page" },
+      { src: "/images/streampay/streampay-2.png", label: "Employer Dashboard" },
+      { src: "/images/streampay/streampay-3.png", label: "Worker Onboarding" },
+      { src: "/images/streampay/streampay-4.png", label: "Worker Earnings Home" },
+      { src: "/images/streampay/streampay-5.png", label: "Live Paycheck and Cash Out" },
+      { src: "/images/streampay/streampay-6.png", label: "Completed Paycheck" },
+      { src: "/images/streampay/streampay-7.png", label: "Completed Cash Out" },
+      { src: "/images/streampay/streampay-8.png", label: "Cash-Out Activity" },
+    ],
+    tech: [
+      "Rust",
+      "Soroban SDK",
+      "Stellar SDK",
+      "React 19",
+      "TypeScript",
+      "Vite",
+      "Tailwind CSS 4",
+      "Freighter API",
+    ],
+    features: [
+      "Fully escrowed salary streams enforced by a Soroban smart contract",
+      "Ledger-timestamp wage accrual with integer-only money calculations",
+      "Worker cash-outs for any earned amount with public explorer receipts",
+      "Fair cancellation that pays earned wages and refunds the unearned balance",
+      "Freighter-connected employer dashboard with stream monitoring and CSV export",
+      "Mobile-first worker PWA with live balances, privacy controls, and currency views",
+      "Encrypted in-app testnet wallet protected by a device PIN and backup flow",
+      "Contract and interface test suites covering monetary invariants and edge cases",
+    ],
+    githubUrls: [{ url: "https://github.com/NOTMORSE-PROG/StreamPay" }],
+    documentationUrl: "/docs/streampay-documentation.pdf",
+  },
+  {
     slug: "tip-mart",
     title: "T.I.P MART",
     category: "personal",
@@ -210,6 +251,10 @@ export const projects: Project[] = [
       "PDF and CSV export of analysis results",
       "Backed by PAEC Corpus v3.4 — RPLL ATC recordings (Feb–Mar 2025)",
     ],
+    githubUrls: [
+      { label: "Platform", url: "https://github.com/NOTMORSE-PROG/PAEC" },
+      { label: "Admin", url: "https://github.com/NOTMORSE-PROG/PAEC_ADMIN" },
+    ],
     documentationUrl: "/docs/paec-documentation.pdf",
   },
   {
@@ -250,7 +295,6 @@ export const projects: Project[] = [
       "Responsive, animated learning interface optimized for desktop and mobile",
     ],
     githubUrls: [{ url: "https://github.com/NOTMORSE-PROG/VoDeMe" }],
-    liveUrl: "https://vodeme.vercel.app",
     documentationUrl: "/docs/vodeme-documentation.pdf",
   },
   {
@@ -281,6 +325,7 @@ export const projects: Project[] = [
       "Text-to-Speech Integration",
       "Offline Learning Capabilities",
     ],
+    githubUrls: [{ url: "https://github.com/NOTMORSE-PROG/VOCANOVA" }],
     documentationUrl: "/docs/vocanova-documentation.pdf",
   },
   {
@@ -321,6 +366,10 @@ export const projects: Project[] = [
       "JOSE-signed JWT auth with bcrypt and per-learner data isolation",
       "Cloud sync over Drizzle ORM + Neon PostgreSQL with offline backoff",
       "Printable completion certificates generated with pdf-lib",
+    ],
+    githubUrls: [
+      { label: "App", url: "https://github.com/NOTMORSE-PROG/TriCogniaVille_App" },
+      { label: "Backend", url: "https://github.com/NOTMORSE-PROG/TriCogniaVille_Backend" },
     ],
     documentationUrl: "/docs/tricognia-ville-documentation.pdf",
   },
@@ -363,6 +412,7 @@ export const projects: Project[] = [
       "Lottie character animations and chapter-specific background music",
       "Zustand-backed local progress, expo-router typed navigation, EAS Build pipeline",
     ],
+    githubUrls: [{ url: "https://github.com/NOTMORSE-PROG/Alex_Quest" }],
     documentationUrl: "/docs/alex-quest-documentation.pdf",
   },
   {
@@ -403,6 +453,10 @@ export const projects: Project[] = [
       "Shard collection, Alingawngaw Crystal assembly, and exportable Certificate of Completion via react-native-view-shot",
       "Role-based portals: STUDENT play, TEACHER analytics with mistake review, and ADMIN audio upload console",
       "JWT auth (Jose) with Google OAuth, server-side answer validation, and Expo SecureStore token storage",
+    ],
+    githubUrls: [
+      { label: "App", url: "https://github.com/NOTMORSE-PROG/LingaQuest_App" },
+      { label: "Web", url: "https://github.com/NOTMORSE-PROG/LingaQuest_Web" },
     ],
     documentationUrl: "/docs/linguaquest-documentation.pdf",
   },
