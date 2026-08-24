@@ -21,6 +21,7 @@ type Player = {
   facing: 1 | -1
   grounded: boolean
   petUntil: number
+  boostUntil: number
 }
 
 type Core = {
@@ -100,6 +101,7 @@ const createGame = (): Game => ({
     facing: 1,
     grounded: true,
     petUntil: 0,
+    boostUntil: 0,
   },
   cores: initialCores(),
   particles: [],
@@ -318,12 +320,26 @@ function drawByte(context: CanvasRenderingContext2D, player: Player, time: numbe
   const running = Math.abs(player.vx) > 25 && player.grounded
   const step = running ? Math.sin(time * 0.02) * 4 : 0
   const petting = player.petUntil > time
-  const tailAngle = Math.sin(time * (petting ? 0.035 : 0.012)) * (petting ? 0.75 : 0.35)
+  const boosted = player.boostUntil > time
+  const tailAngle = Math.sin(time * (petting || boosted ? 0.035 : 0.012)) * (petting || boosted ? 0.75 : 0.35)
 
   context.save()
   context.translate(player.x + player.width / 2, player.y + player.height / 2)
   context.scale(player.facing, 1)
   context.imageSmoothingEnabled = false
+
+  if (boosted) {
+    context.save()
+    context.globalAlpha = 0.35 + Math.sin(time * 0.02) * 0.1
+    context.strokeStyle = "#ff6bdb"
+    context.lineWidth = 4
+    context.shadowColor = "#ff6bdb"
+    context.shadowBlur = 20
+    context.beginPath()
+    context.ellipse(0, 0, 38, 34, 0, 0, Math.PI * 2)
+    context.stroke()
+    context.restore()
+  }
 
   context.fillStyle = "rgba(0, 0, 0, 0.28)"
   context.beginPath()
@@ -424,6 +440,7 @@ export function ByteQuestGame() {
   const audioRef = useRef<AudioContext | null>(null)
   const soundRef = useRef(true)
   const messageTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null)
+  const petCountRef = useRef(0)
 
   const [mode, setMode] = useState<GameMode>("intro")
   const [collected, setCollected] = useState<Core["id"][]>([])
@@ -467,23 +484,45 @@ export function ByteQuestGame() {
   }, [])
 
   const resetGame = useCallback(() => {
-    gameRef.current = createGame()
+    const nextGame = createGame()
+    if (petCountRef.current >= 3) nextGame.player.boostUntil = performance.now() + 5000
+    gameRef.current = nextGame
     inputRef.current = { left: false, right: false, jumpQueued: false }
     setCollected([])
     setTimeLeft(START_TIME)
-    setPets(0)
-    setMessage("Collect BUILD, WIN, and LEAD to open the portal.")
+    setMessage(
+      petCountRef.current >= 3
+        ? "ZOOMIES active — Byte has five seconds of boosted running speed!"
+        : "Collect BUILD, WIN, and LEAD to open the portal.",
+    )
     setGameMode("playing")
     playTone(220, 0.08, 440)
   }, [playTone, setGameMode])
 
   const petByte = useCallback(() => {
     const game = gameRef.current
-    game.player.petUntil = performance.now() + 1100
+    const now = performance.now()
+    const nextPetCount = petCountRef.current + 1
+    const unlockedZoomies = nextPetCount % 3 === 0
+    petCountRef.current = nextPetCount
+    game.player.petUntil = now + 1100
     if (modeRef.current === "playing") game.timeLeft = Math.min(START_TIME + 5, game.timeLeft + 1)
-    setPets((count) => count + 1)
-    showMessage("Byte received +1 courage and a very serious tail wag.")
-    playTone(520, 0.08, 760)
+    setPets(nextPetCount)
+
+    if (unlockedZoomies) {
+      game.player.boostUntil = now + 5000
+      addBurst(game, game.player.x + game.player.width / 2, game.player.y + 8, "#ff6bdb", 38)
+      showMessage("ZOOMIES UNLOCKED — five seconds of pink-powered speed!")
+      playTone(520, 0.24, 1040)
+    } else {
+      const petsNeeded = 3 - (nextPetCount % 3)
+      showMessage(
+        modeRef.current === "playing"
+          ? `+1 second and a tail wag. ${petsNeeded} more pet${petsNeeded === 1 ? "" : "s"} to unlock Zoomies.`
+          : `${petsNeeded} more pet${petsNeeded === 1 ? "" : "s"} to unlock Byte's Zoomies.`,
+      )
+      playTone(520, 0.08, 760)
+    }
   }, [playTone, showMessage])
 
   useEffect(() => {
@@ -512,19 +551,22 @@ export function ByteQuestGame() {
       if (modeRef.current !== "playing") return
       const player = game.player
       const previousBottom = player.y + player.height
+      const boosted = player.boostUntil > now
+      const acceleration = boosted ? 1800 : 1250
+      const maxSpeed = boosted ? 430 : 285
 
       if (inputRef.current.left) {
-        player.vx -= 1250 * delta
+        player.vx -= acceleration * delta
         player.facing = -1
       }
       if (inputRef.current.right) {
-        player.vx += 1250 * delta
+        player.vx += acceleration * delta
         player.facing = 1
       }
       if (!inputRef.current.left && !inputRef.current.right) {
         player.vx *= Math.pow(0.002, delta)
       }
-      player.vx = Math.max(-285, Math.min(285, player.vx))
+      player.vx = Math.max(-maxSpeed, Math.min(maxSpeed, player.vx))
 
       if (inputRef.current.jumpQueued && player.grounded) {
         player.vy = -650
@@ -613,6 +655,19 @@ export function ByteQuestGame() {
           maxLife: 0.8,
           color: "#ff6b9d",
           size: 4,
+        })
+      }
+
+      if (boosted && Math.abs(player.vx) > 40 && Math.random() > 0.58) {
+        game.particles.push({
+          x: player.x + (player.facing === 1 ? 3 : player.width - 3),
+          y: player.y + 18 + Math.random() * 20,
+          vx: -player.facing * (40 + Math.random() * 65),
+          vy: -15 + Math.random() * 30,
+          life: 0.45,
+          maxLife: 0.45,
+          color: Math.random() > 0.5 ? "#ff6bdb" : "#ffb3ed",
+          size: 3 + Math.random() * 4,
         })
       }
     }
@@ -794,9 +849,71 @@ export function ByteQuestGame() {
                   <p className="font-mono text-[7px] uppercase tracking-[0.3em] text-cyan-300 sm:text-[10px] sm:tracking-[0.35em]">Launch mission 01</p>
                   <h2 className="mt-1 font-display text-2xl leading-none sm:mt-3 sm:text-6xl sm:leading-normal">Wake Byte. Save the launch.</h2>
                   <p className="mx-auto mt-1.5 max-w-md text-[9px] leading-snug text-slate-300 sm:mt-4 sm:text-base sm:leading-relaxed">
-                    Grab the three glowing cores. When the portal wakes up, run into it. No coding knowledge required.
+                    Grab the three glowing cores. When the portal wakes up, run into it.
                   </p>
-                  <div className="mt-2.5 flex flex-wrap items-center justify-center gap-2 sm:mt-6 sm:gap-3">
+                  <div className="mt-2 flex items-center justify-center gap-2 sm:mt-5 sm:gap-3">
+                    <svg
+                      key={`landing-byte-${pets}`}
+                      viewBox="0 0 112 68"
+                      className="h-11 w-[72px] shrink-0 overflow-visible [image-rendering:pixelated] sm:h-16 sm:w-24"
+                      role="img"
+                      aria-label={pets > 0 ? "Byte bounces, wags his tail, and releases hearts" : "Byte waits for a pet"}
+                    >
+                      {pets > 0 && pets % 3 === 0 && (
+                        <ellipse cx="55" cy="34" rx="43" ry="26" fill="none" stroke="#ff6bdb" strokeWidth="3" opacity="0">
+                          <animate attributeName="opacity" values="0;0.9;0" dur="0.8s" repeatCount="2" />
+                          <animate attributeName="rx" values="30;48;54" dur="0.8s" repeatCount="2" />
+                          <animate attributeName="ry" values="18;29;33" dur="0.8s" repeatCount="2" />
+                        </ellipse>
+                      )}
+                      <g>
+                        <animateTransform
+                          attributeName="transform"
+                          type="translate"
+                          values="0 1;0 -8;0 1;0 -4;0 1"
+                          keyTimes="0;.22;.48;.7;1"
+                          dur="0.7s"
+                          repeatCount="1"
+                        />
+                        <ellipse cx="54" cy="55" rx="31" ry="5" fill="#000" opacity=".25" />
+                        <g>
+                          <animateTransform
+                            attributeName="transform"
+                            type="rotate"
+                            values="-22 32 38;32 32 38;-22 32 38;32 32 38;-22 32 38"
+                            dur="0.18s"
+                            repeatCount="4"
+                          />
+                          <rect x="12" y="34" width="27" height="10" fill="#d96b2b" />
+                          <rect x="10" y="34" width="8" height="10" fill="#fff0cf" />
+                        </g>
+                        <rect x="34" y="29" width="39" height="26" fill="#e77a32" />
+                        <rect x="65" y="21" width="27" height="29" fill="#e77a32" />
+                        <rect x="51" y="42" width="24" height="13" fill="#fff0cf" />
+                        <rect x="76" y="34" width="20" height="13" fill="#fff0cf" />
+                        <path d="M69 23l4-17 11 16zm17-1L94 8l3 18z" fill="#b95025" />
+                        <rect x="84" y="28" width="4" height="5" fill="#101827" />
+                        <rect x="94" y="39" width="5" height="5" fill="#101827" />
+                        <rect x="41" y="51" width="9" height="12" fill="#cf6228" />
+                        <rect x="64" y="51" width="9" height="12" fill="#cf6228" />
+                        <rect x="41" y="59" width="9" height="5" fill="#fff0cf" />
+                        <rect x="64" y="59" width="9" height="5" fill="#fff0cf" />
+                        <rect x="63" y="43" width="15" height="4" fill="#41e9ff" />
+                        <rect x="69" y="45" width="5" height="6" fill="#ffcc4d" />
+                      </g>
+                      {pets > 0 && (
+                        <g fill="#ff75c8" fontFamily="ui-monospace, monospace" fontWeight="900">
+                          <text x="30" y="22" fontSize="13" opacity="0">♥
+                            <animate attributeName="opacity" values="0;1;0" dur="0.9s" repeatCount="1" />
+                            <animate attributeName="y" values="28;8" dur="0.9s" repeatCount="1" />
+                          </text>
+                          <text x="55" y="18" fontSize="10" opacity="0">♥
+                            <animate attributeName="opacity" values="0;1;0" dur="0.8s" begin=".12s" repeatCount="1" />
+                            <animate attributeName="y" values="25;3" dur="0.8s" begin=".12s" repeatCount="1" />
+                          </text>
+                        </g>
+                      )}
+                    </svg>
                     <button
                       type="button"
                       onClick={resetGame}
@@ -813,7 +930,7 @@ export function ByteQuestGame() {
                     </button>
                   </div>
                   <p className="mt-5 hidden font-mono text-[10px] uppercase tracking-[0.13em] text-slate-500 sm:block">
-                    Move: A D or ← → · Jump: W, ↑ or Space · Touch controls included
+                    Move: A D or ← → · Jump: W, ↑ or Space · 3 pets unlock Zoomies
                   </p>
                 </div>
               </div>
