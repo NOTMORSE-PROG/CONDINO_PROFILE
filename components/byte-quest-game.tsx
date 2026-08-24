@@ -412,7 +412,7 @@ function drawParticles(context: CanvasRenderingContext2D, particles: Particle[])
   context.globalAlpha = 1
 }
 
-function drawScene(context: CanvasRenderingContext2D, game: Game, mode: GameMode, time: number) {
+function drawScene(context: CanvasRenderingContext2D, game: Game, time: number) {
   context.clearRect(0, 0, WORLD_WIDTH, WORLD_HEIGHT)
   drawBackground(context, time)
   platforms.forEach((platform) => drawPlatform(context, platform))
@@ -420,15 +420,6 @@ function drawScene(context: CanvasRenderingContext2D, game: Game, mode: GameMode
   drawPortal(context, game.cores.every((core) => core.collected), time)
   drawByte(context, game.player, time)
   drawParticles(context, game.particles)
-
-  if (mode === "playing") {
-    const remaining = game.cores.filter((core) => !core.collected).length
-    if (remaining > 0) {
-      drawPixelText(context, `${remaining} PROOF CORE${remaining === 1 ? "" : "S"} LEFT`, 28, 34, 13, "rgba(225,240,255,0.72)")
-    } else {
-      drawPixelText(context, "PORTAL OPEN — RUN TO THE RIGHT!", 28, 34, 13, "#71efff")
-    }
-  }
 }
 
 export function ByteQuestGame() {
@@ -689,7 +680,7 @@ export function ByteQuestGame() {
         game.particles = game.particles.filter((particle) => particle.life > 0)
       }
 
-      drawScene(context, game, modeRef.current, now)
+      drawScene(context, game, now)
       animationRef.current = requestAnimationFrame(frame)
     }
     animationRef.current = requestAnimationFrame(frame)
