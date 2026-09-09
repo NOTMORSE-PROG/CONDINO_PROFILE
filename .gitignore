@@ -35,6 +35,11 @@ url-mapping.json
 /test-results/
 /playwright-report/
 
+# local agent instructions and generated document artifacts
+/AGENTS.md
+/output/
+/tmp/
+
 # claude
 CLAUDE.md
 .claude/
