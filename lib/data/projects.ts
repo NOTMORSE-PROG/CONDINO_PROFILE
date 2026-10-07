@@ -169,10 +169,7 @@ export const projects: Project[] = [
       "Gamified achievements: XP, daily streaks, badges, and leaderboards",
       "Cross-platform: React + Vite web and Java + Material 3 Android on a shared Django REST + Channels backend",
     ],
-    githubUrls: [
-      { label: "Web", url: "https://github.com/NOTMORSE-PROG/CodeCompass_Frontend" },
-      { label: "Android", url: "https://github.com/NOTMORSE-PROG/CodeCompass_Android" },
-    ],
+    githubUrls: [{ label: "Repository", url: "https://github.com/NOTMORSE-PROG/CodeCompass" }],
     documentationUrl: "/docs/codecompass-documentation.pdf",
   },
   {
@@ -251,10 +248,7 @@ export const projects: Project[] = [
       "PDF and CSV export of analysis results",
       "Backed by PAEC Corpus v3.4 — RPLL ATC recordings (Feb–Mar 2025)",
     ],
-    githubUrls: [
-      { label: "Platform", url: "https://github.com/NOTMORSE-PROG/PAEC" },
-      { label: "Admin", url: "https://github.com/NOTMORSE-PROG/PAEC_ADMIN" },
-    ],
+    githubUrls: [{ label: "Repository", url: "https://github.com/NOTMORSE-PROG/PAEC" }],
     documentationUrl: "/docs/paec-documentation.pdf",
   },
   {
@@ -367,10 +361,7 @@ export const projects: Project[] = [
       "Cloud sync over Drizzle ORM + Neon PostgreSQL with offline backoff",
       "Printable completion certificates generated with pdf-lib",
     ],
-    githubUrls: [
-      { label: "App", url: "https://github.com/NOTMORSE-PROG/TriCogniaVille_App" },
-      { label: "Backend", url: "https://github.com/NOTMORSE-PROG/TriCogniaVille_Backend" },
-    ],
+    githubUrls: [{ label: "Repository", url: "https://github.com/NOTMORSE-PROG/TriCogniaVille" }],
     documentationUrl: "/docs/tricognia-ville-documentation.pdf",
   },
   {
@@ -454,10 +445,7 @@ export const projects: Project[] = [
       "Role-based portals: STUDENT play, TEACHER analytics with mistake review, and ADMIN audio upload console",
       "JWT auth (Jose) with Google OAuth, server-side answer validation, and Expo SecureStore token storage",
     ],
-    githubUrls: [
-      { label: "App", url: "https://github.com/NOTMORSE-PROG/LingaQuest_App" },
-      { label: "Web", url: "https://github.com/NOTMORSE-PROG/LingaQuest_Web" },
-    ],
+    githubUrls: [{ label: "Repository", url: "https://github.com/NOTMORSE-PROG/LinguaQuest" }],
     documentationUrl: "/docs/linguaquest-documentation.pdf",
   },
 ]
