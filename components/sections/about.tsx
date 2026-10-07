@@ -43,9 +43,6 @@ export function About() {
                       <dt className="font-display text-xl">{skill.name}</dt>
                       <dd className="mt-0.5 text-sm text-muted-foreground">{skill.desc}</dd>
                     </div>
-                    <span className="shrink-0 text-xs uppercase tracking-[0.2em] text-muted-foreground">
-                      {skill.level}
-                    </span>
                   </div>
                 ))}
               </dl>
