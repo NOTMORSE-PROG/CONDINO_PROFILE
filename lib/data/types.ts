@@ -22,7 +22,6 @@ export interface Project {
 export interface CoreSkill {
   name: string
   desc: string
-  level: "Expert" | "Advanced"
 }
 
 export interface Specialization {
