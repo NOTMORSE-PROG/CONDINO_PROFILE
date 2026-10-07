@@ -1,11 +1,11 @@
 import type { CoreSkill, Specialization } from "./types"
 
 export const coreSkills: CoreSkill[] = [
-  { name: "Kotlin", desc: "Android Development", level: "Expert" },
-  { name: "Jetpack Compose", desc: "Modern Android UI", level: "Expert" },
-  { name: "Next.js", desc: "Full-stack React", level: "Advanced" },
-  { name: "React", desc: "Frontend Library", level: "Advanced" },
-  { name: "TypeScript", desc: "Type-safe JavaScript", level: "Advanced" },
+  { name: "Kotlin", desc: "Android Development" },
+  { name: "Jetpack Compose", desc: "Modern Android UI" },
+  { name: "Next.js", desc: "Full-stack React" },
+  { name: "React", desc: "Frontend Library" },
+  { name: "TypeScript", desc: "Type-safe JavaScript" },
 ]
 
 export const additionalSkills: string[] = [
