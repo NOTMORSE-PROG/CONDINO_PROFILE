@@ -27,7 +27,7 @@ function buildLlmsTxt(): string {
   lines.push("")
 
   lines.push("## Core Skills")
-  coreSkills.forEach((skill) => lines.push(`- ${skill.name} (${skill.level}) — ${skill.desc}`))
+  coreSkills.forEach((skill) => lines.push(`- ${skill.name} — ${skill.desc}`))
   lines.push("")
 
   lines.push("## Specializations")
